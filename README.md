@@ -10,6 +10,7 @@ Bu repository Usta Renovasyon'un herhangi bir uygulama oluşturucuya veya uygula
 - Form teslimi: WhatsApp yönlendirmesi
 - Fotoğraflar: yalnızca cihaz içi önizleme; sunucuya yüklenmez
 - Yönetim paneli / kullanıcı girişi / veritabanı yoktur
+- Ana sayfa hero alanı hareketli video yerine yerel, yüksek çözünürlüklü sabit görsel kullanır.
 
 ## Yerel çalıştırma
 
