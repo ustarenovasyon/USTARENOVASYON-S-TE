@@ -1,0 +1,142 @@
+name: Bootstrap Usta Renovasyon GitHub-only site
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/bootstrap.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: usta-bootstrap
+  cancel-in-progress: false
+
+jobs:
+  bootstrap-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Reconstruct verified source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d .bootstrap-min
+          cat \
+            .bootstrap-min/part-00 \
+            .bootstrap-min/part-01 \
+            .bootstrap-min/part-02 \
+            .bootstrap-min/part-03 \
+            .bootstrap-min/part-04 \
+            .bootstrap-min/part-05 \
+            .bootstrap-min/part-06 \
+            .bootstrap-min/part-07 \
+            .bootstrap-min/part-08 \
+            .bootstrap-min/part-09 \
+            .bootstrap-min/part-10-00 \
+            .bootstrap-min/part-10-01 \
+            .bootstrap-min/part-10-02 \
+            .bootstrap-min/part-11-00 \
+            .bootstrap-min/part-11-01 \
+            .bootstrap-min/part-11-02 \
+            .bootstrap-min/part-12-00 \
+            .bootstrap-min/part-12-01 \
+            > /tmp/usta-source.b64
+          base64 --decode /tmp/usta-source.b64 > /tmp/usta-source.tar.xz
+          echo "21aa3be7567839fb699810a8b10eab220b6dc6d15ee6f3009e4e5e5865829b45  /tmp/usta-source.tar.xz" | sha256sum --check --strict
+          tar -xJf /tmp/usta-source.tar.xz -C .
+
+      - name: Normalize permanent deployment workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('.github/workflows/deploy.yml')
+          s = p.read_text()
+          s = s.replace('uses: actions/checkout@v6', 'uses: actions/checkout@v4')
+          s = s.replace('          cache: npm\n', '')
+          s = s.replace('run: npm ci', 'run: npm install --no-audit --no-fund')
+          p.write_text(s)
+          PY
+
+      - name: Verify Base44 is absent from source
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RniE 'base44|@base44|base44Client' src public package.json vite.config.js 2>/dev/null; then
+            echo 'Forbidden Base44 dependency/reference detected.' >&2
+            exit 1
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Verify generated output
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f dist/index.html
+          test -f dist/CNAME
+          test -f dist/sitemap.xml
+          test -f dist/robots.txt
+          test -f dist/404.html
+          test "$(wc -l < public/routes.txt)" -ge 200
+          echo "Routes: $(wc -l < public/routes.txt)"
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
+
+      - name: Commit clean permanent source tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .bootstrap-min .bootstrap
+          rm -f .github/workflows/bootstrap.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No source changes to commit."
+          else
+            git commit -m "Install independent GitHub Pages site"
+            git push origin HEAD:main
+          fi
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: bootstrap-build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
