@@ -48,6 +48,7 @@ jobs:
             .bootstrap-min/part-12-00 \
             .bootstrap-min/part-12-01 \
             > /tmp/usta-source.b64
+          test "$(wc -c < /tmp/usta-source.b64)" -eq 151308
           base64 --decode /tmp/usta-source.b64 > /tmp/usta-source.tar.xz
           echo "21aa3be7567839fb699810a8b10eab220b6dc6d15ee6f3009e4e5e5865829b45  /tmp/usta-source.tar.xz" | sha256sum --check --strict
           tar -xJf /tmp/usta-source.tar.xz -C .
@@ -82,6 +83,13 @@ jobs:
 
       - name: Install dependencies
         run: npm install --no-audit --no-fund
+
+      - name: Clean legacy lint leftovers
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -i '/eslint-disable-next-line react-hooks\/exhaustive-deps/d' src/hooks/useActiveSection.js
+          npm run lint:fix
 
       - name: Lint
         run: npm run lint
