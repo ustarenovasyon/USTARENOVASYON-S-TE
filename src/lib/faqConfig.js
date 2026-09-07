@@ -1,0 +1,21 @@
+// SSS kategorileri — gruplama için kullanılır. Yeni kategori eklenebilir.
+export const faqCategories = [
+  "Genel Sorular",
+  "Fiyatlandırma",
+  "Ücretsiz Keşif",
+  "Teklif ve Randevu",
+  "İç Cephe Boya",
+  "Dış Cephe Boya",
+  "Alçı ve Sıva",
+  "Çatı İzolasyonu",
+  "Su Yalıtımı",
+  "Mantolama",
+  "Alçıpan ve Asma Tavan",
+  "Ev Tadilatı",
+  "Malzeme",
+  "Uygulama Süresi",
+  "Hizmet Bölgeleri",
+  "Garanti ve İş Sonrası",
+  "Fotoğraf ve Dosya Gönderimi",
+  "İletişim ve Gizlilik",
+];

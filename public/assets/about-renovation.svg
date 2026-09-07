@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Renovasyon uygulaması</title>
+  <desc id="desc">Boya kovası, merdiven, duvar ve tadilat ekipmanlarını gösteren dekoratif illüstrasyon.</desc>
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="48" fill="url(#a)"/>
+  <rect x="150" y="120" width="900" height="560" rx="34" fill="#ffffff"/>
+  <rect x="205" y="175" width="390" height="260" rx="20" fill="#dbeafe"/>
+  <path d="M400 175v260M205 305h390" stroke="#94a3b8" stroke-width="12"/>
+  <rect x="680" y="170" width="270" height="360" rx="22" fill="#f8fafc" stroke="#cbd5e1" stroke-width="10"/>
+  <path d="M735 470l110-260M845 470L735 210" stroke="#f59e0b" stroke-width="24" stroke-linecap="round"/>
+  <path d="M755 270h70M742 320h92M730 370h108M717 420h122" stroke="#0f172a" stroke-width="14" stroke-linecap="round"/>
+  <g transform="translate(460 540)">
+    <ellipse cx="0" cy="125" rx="170" ry="42" fill="#cbd5e1"/>
+    <rect x="-120" y="0" width="240" height="150" rx="24" fill="#f59e0b"/>
+    <rect x="-105" y="-25" width="210" height="40" rx="18" fill="#0f172a"/>
+    <path d="M-80 15v105M80 15v105" stroke="#f8fafc" stroke-width="10" opacity=".45"/>
+    <path d="M-85 -20c0-85 170-85 170 0" fill="none" stroke="#64748b" stroke-width="14"/>
+  </g>
+  <rect x="760" y="590" width="180" height="55" rx="16" fill="#0f172a"/>
+  <rect x="800" y="550" width="100" height="50" rx="14" fill="#e2e8f0"/>
+  <circle cx="155" cy="760" r="110" fill="#0f172a" opacity=".06"/>
+  <circle cx="1050" cy="85" r="140" fill="#f59e0b" opacity=".10"/>
+</svg>

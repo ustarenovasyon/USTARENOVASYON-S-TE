@@ -1,0 +1,18 @@
+# Usta Renovasyon — robots.txt
+# Ana site taranabilir; yönetim ve özel alanlar korunur.
+
+User-agent: *
+Allow: /
+Disallow: /yonetim
+Disallow: /yonetim/
+Disallow: /seo-yonetimi
+Disallow: /reklam/
+# Müşteri özel dosyaları kamuya açık taramadan koruma (ek kontrol)
+Disallow: /*/dosyalar/
+
+# CSS ve JS engellenmez — sayfa render için gerekli
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemap konumu
+Sitemap: https://ustarenovasyon.com/sitemap.xml
