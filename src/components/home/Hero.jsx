@@ -4,7 +4,6 @@ import { Image } from "@/components/ui/image";
 import { getPhoneLink, getWhatsAppLink } from "@/lib/siteConfig";
 import { trackCta } from "@/lib/ctaTracking";
 import { heroContent } from "@/lib/homeContent";
-import PaintingPriceCards from "@/components/home/PaintingPriceCards";
 
 const HERO_IMG =
   "/assets/hero-renovation.svg";
@@ -14,9 +13,6 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-primary text-white">
       <div className="absolute inset-0 bg-grid opacity-[0.06]" />
       <div className="container-grid relative py-16 lg:py-24">
-        <div className="reveal mb-8 lg:mb-10">
-          <PaintingPriceCards />
-        </div>
         <div className="grid items-center gap-10 lg:grid-cols-2">
         <div className="reveal">
           <span className="section-eyebrow text-accent">
