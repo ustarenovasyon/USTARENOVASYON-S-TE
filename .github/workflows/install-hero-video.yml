@@ -1,0 +1,83 @@
+name: Install looping hero video
+
+on:
+  push:
+    paths:
+      - ".github/workflows/install-hero-video.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Reconstruct and verify hero video
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .hero-video-parts/part*.b64 > /tmp/hero-video.b64
+          base64 -d /tmp/hero-video.b64 > public/assets/hero-site-video.mp4
+          echo "6c311b495623f9fb12131b2541e28529d9f40dfc3b458da5021f28312330b6f0  public/assets/hero-site-video.mp4" | sha256sum -c -
+          test -s public/assets/hero-site-video.mp4
+
+      - name: Remove painting price cards and enable infinite video loop
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          hero = Path("src/components/home/Hero.jsx")
+          text = hero.read_text()
+          text = text.replace('import PaintingPriceCards from "@/components/home/PaintingPriceCards";\n', '')
+          text = text.replace('''        <div className="reveal mb-8 lg:mb-10">\n          <PaintingPriceCards />\n        </div>\n''', '')
+          hero.write_text(text)
+
+          Path("src/components/home/HeroVideo.jsx").write_text('''import React from "react";\n\nconst VIDEO_SRC = "/assets/hero-site-video.mp4";\nconst POSTER = "/assets/hero-renovation.svg";\n\n// GitHub Pages sürümü: yerel video sürekli döngüde oynar; Base44 bağımlılığı yoktur.\nexport default function HeroVideo() {\n  return (\n    <section aria-hidden="true" className="relative w-full bg-primary">\n      <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16 / 9" }}>\n        <video\n          className="absolute inset-0 h-full w-full object-cover"\n          autoPlay\n          muted\n          loop\n          playsInline\n          preload="metadata"\n          poster={POSTER}\n        >\n          <source src={VIDEO_SRC} type="video/mp4" />\n        </video>\n        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-background/45" />\n        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-background to-transparent" />\n      </div>\n    </section>\n  );\n}\n''')
+          PY
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Verify source
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RniE 'base44|@base44|base44Client' src public package.json vite.config.js 2>/dev/null; then
+            echo 'Forbidden Base44 dependency/reference detected.' >&2
+            exit 1
+          fi
+          if grep -q 'PaintingPriceCards' src/components/home/Hero.jsx; then
+            echo 'Painting price cards still present in Hero.' >&2
+            exit 1
+          fi
+          grep -q 'loop' src/components/home/HeroVideo.jsx
+          grep -q 'autoPlay' src/components/home/HeroVideo.jsx
+          grep -q 'playsInline' src/components/home/HeroVideo.jsx
+          npm run lint
+          npm run build
+          test -f dist/assets/hero-site-video.mp4
+
+      - name: Commit final hero update and remove staging files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .hero-video-parts
+          rm -f .github/workflows/install-hero-video.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Restore looping hero video and remove painting price cards"
+          git push
