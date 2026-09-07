@@ -3,7 +3,7 @@ import React from "react";
 const VIDEO_SRC = "/assets/hero-site-video.mp4";
 const POSTER = "/assets/hero-renovation.svg";
 
-// GitHub Pages sürümü: yerel video sürekli döngüde oynar ve harici servis gerektirmez.
+// GitHub Pages sürümü: yerel video kesintisiz döngüde oynar ve harici servis gerektirmez.
 export default function HeroVideo() {
   return (
     <section aria-hidden="true" className="relative w-full bg-primary">
