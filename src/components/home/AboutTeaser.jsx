@@ -5,7 +5,7 @@ import { CallButton } from "@/components/common/ContactActions";
 import Reveal from "@/components/common/Reveal";
 
 const ABOUT_IMG =
-  "/assets/about-renovation.svg";
+  "/assets/about-original.png";
 
 // Usta Renovasyon kısa tanıtım — gerçek Özal Usta fotoğrafı eklenene kadar çalışma görseli.
 export default function AboutTeaser() {
@@ -16,7 +16,7 @@ export default function AboutTeaser() {
           <div className="overflow-hidden rounded-2xl border border-border shadow-xl">
             <Image
               src={ABOUT_IMG}
-              alt="Usta eliyle pürüzsüz alçı sıva uygulaması detayı"
+              alt="Usta Renovasyon alçı, boya ve tadilat çalışma görseli"
               className="aspect-[4/3] w-full"
               fittingType="fill"
             />

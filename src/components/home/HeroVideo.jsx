@@ -1,26 +1,20 @@
 import React from "react";
+import { Image } from "@/components/ui/image";
 
-const VIDEO_SRC = "/assets/hero-site-video.mp4";
-const POSTER = "/assets/hero-renovation.svg";
+const HERO_STILL = "/assets/hero-main.png";
 
-// GitHub Pages sürümü: yerel video kesintisiz döngüde oynar ve harici servis gerektirmez.
+// Kullanıcı isteği: hareketli video yok; yüksek çözünürlüklü sabit ana görsel kullanılır.
 export default function HeroVideo() {
   return (
-    <section aria-hidden="true" className="relative w-full bg-primary">
-      <div className="relative w-full overflow-hidden" style={{ aspectRatio: "16 / 9" }}>
-        <video
-          className="absolute inset-0 h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster={POSTER}
-        >
-          <source src={VIDEO_SRC} type="video/mp4" />
-        </video>
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-background/45" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-background to-transparent" />
+    <section className="w-full bg-primary" aria-label="Usta Renovasyon ana görseli">
+      <div className="mx-auto w-full overflow-hidden bg-primary">
+        <Image
+          src={HERO_STILL}
+          alt="Usta Renovasyon iç ve dış cephe uygulamalarında çalışan ekip"
+          className="aspect-video w-full"
+          fittingType="fit"
+          loading="eager"
+        />
       </div>
     </section>
   );

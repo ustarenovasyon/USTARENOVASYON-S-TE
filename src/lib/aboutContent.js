@@ -14,17 +14,17 @@ export const aboutContent = {
     "Usta Renovasyon, Özal Usta yönetiminde başta Bornova olmak üzere İzmir genelinde alçı, sıva, iç ve dış cephe boya, mineral sıva, izolasyon, mantolama, alçıpan, dekorasyon ve tadilat hizmetleri sunmaktadır.",
   heroSubtitle2:
     "Her işin mevcut durumu değerlendirilerek ihtiyaç duyulan uygulamalar belirlenir; müşteri yapılacak işlemler, malzeme seçenekleri ve çalışma süreci hakkında bilgilendirilir.",
-  heroImage: "/assets/hero-renovation.svg",
+  heroImage: "/assets/hero-main.png",
 
   introTitle: "Usta Renovasyon Kimdir?",
   introText:
     "Usta Renovasyon; boya, alçı, sıva, dış cephe, izolasyon, mantolama, alçıpan ve tadilat ihtiyaçlarında doğrudan usta ile iletişim kurulmasını sağlayan yerel bir hizmet markasıdır.\n\nBaşta Bornova olmak üzere İzmir'in farklı ilçelerinde ev, daire, villa, apartman, ofis, mağaza ve iş yerlerinin yenileme ihtiyaçlarına yönelik çözümler sunulmaktadır.\n\nHer proje kendi mevcut durumuna göre değerlendirilir. Yapılacak işin kapsamı, yüzeyin durumu, kullanılacak malzeme ve uygulama aşamaları müşterinin ihtiyacına göre belirlenir.",
-  introImage: "/assets/about-renovation.svg",
+  introImage: "/assets/about-original.png",
 
   ozalTitle: "Özal Usta ile Doğrudan İletişim",
   ozalText:
     "Usta Renovasyon'un kurucusu ve hizmet yetkilisi Özal Usta'dır. Müşteriler yapılacak iş hakkında aracı olmadan doğrudan Özal Usta ile iletişim kurabilir.\n\nTalep alınırken işin türü, konumu, alanın mevcut durumu ve müşterinin beklentileri dinlenir. Mümkünse fotoğraflar üzerinden ön değerlendirme yapılır; gerekli durumlarda keşif planlanır.\n\nAmaç, ihtiyaç duyulmayan işlemleri eklemek yerine mevcut sorunu doğru değerlendirmek ve uygulanabilecek çözüm seçenekleri hakkında müşteriye açık bilgi vermektir.",
-  ozalPhoto: "", // Gerçek fotoğraf eklenene kadar boş; çalışma görseli kullanılır, Özal Usta olarak etiketlenmez.
+  ozalPhoto: "/assets/brand-contact.svg", // Kurumsal iletişim görseli; kişi portresi olarak kullanılmaz.
 
   approachTitle: "Çalışma Anlayışımız",
   approachText:

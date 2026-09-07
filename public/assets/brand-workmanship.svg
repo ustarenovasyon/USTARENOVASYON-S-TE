@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+  <title id="t">Usta Renovasyon çalışma ve hizmet görseli</title>
+  <desc id="d">Lacivert ve turuncu kurumsal tasarım, ev, boya ve tadilat temaları</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08152b"/><stop offset="1" stop-color="#132443"/></linearGradient>
+    <pattern id="g" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/><rect width="1200" height="800" fill="url(#g)"/>
+  <path d="M0 610 370 310l170 138 178-174 482 385v141H0Z" fill="#0d1c35"/>
+  <path d="M120 360 360 155l240 205" fill="none" stroke="#ff9d00" stroke-width="35" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190 360h335v235H190z" fill="#f5f7fb" opacity=".96"/><path d="M300 455h112v140H300z" fill="#ff9d00"/>
+  <rect x="690" y="165" width="360" height="42" rx="21" fill="#ff9d00"/><rect x="690" y="225" width="260" height="18" rx="9" fill="#f5f7fb" opacity=".85"/>
+  <text x="690" y="335" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="800">USTA</text>
+  <text x="690" y="405" fill="#ff9d00" font-family="Arial,Helvetica,sans-serif" font-size="54" font-weight="800">RENOVASYON</text>
+  <text x="690" y="470" fill="#cbd3df" font-family="Arial,Helvetica,sans-serif" font-size="27">ALÇI • BOYA • DIŞ CEPHE</text>
+  <text x="690" y="510" fill="#cbd3df" font-family="Arial,Helvetica,sans-serif" font-size="27">MANTOLAMA • TADİLAT</text>
+  <rect x="690" y="565" width="390" height="92" rx="22" fill="#ff9d00"/>
+  <text x="885" y="622" text-anchor="middle" fill="#07152a" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800">0536 035 88 98</text>
+</svg>

@@ -6,7 +6,7 @@ import { trackCta } from "@/lib/ctaTracking";
 import { heroContent } from "@/lib/homeContent";
 
 const HERO_IMG =
-  "/assets/hero-renovation.svg";
+  "/assets/brand-workmanship.svg";
 
 export default function Hero() {
   return (
@@ -68,7 +68,7 @@ export default function Hero() {
           <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
             <Image
               src={HERO_IMG}
-              alt="İzmir'de yenilenmiş ferah ve modern daire iç mekan"
+              alt="Usta Renovasyon hizmet ve iletişim görseli"
               className="aspect-[4/3] w-full"
               fittingType="fill"
             />

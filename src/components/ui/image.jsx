@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-const FALLBACK_IMAGE_URL = "/assets/renovation-placeholder.svg";
+const FALLBACK_IMAGE_URL = "/assets/brand-workmanship.svg";
 
 const Image = React.forwardRef(({ src, fittingType = "fill", className, onError, ...props }, ref) => {
   const [imgSrc, setImgSrc] = React.useState(src || FALLBACK_IMAGE_URL);

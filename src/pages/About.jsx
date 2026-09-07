@@ -147,7 +147,7 @@ export default function About() {
           <Reveal className="order-2 overflow-hidden rounded-2xl border border-border shadow-lg lg:order-1">
             <Image
               src={data.ozalPhoto || data.introImage}
-              alt={data.ozalPhoto ? "Usta Renovasyon kurucusu Özal Usta" : "Usta Renovasyon çalışma alanı"}
+              alt="Özal Usta ve Usta Renovasyon iletişim bilgileri"
               className="aspect-[4/3] w-full"
               fittingType="fill"
             />
