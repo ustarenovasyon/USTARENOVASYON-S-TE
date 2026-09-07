@@ -1,28 +1,25 @@
 import React from "react";
 import { MapPin, MessageCircle, Phone, ClipboardCheck } from "lucide-react";
-import { Image } from "@/components/ui/image";
 import { getPhoneLink, getWhatsAppLink } from "@/lib/siteConfig";
 import { trackCta } from "@/lib/ctaTracking";
 import { heroContent } from "@/lib/homeContent";
-
-const HERO_IMG =
-  "/assets/brand-workmanship.svg";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary text-white">
       <div className="absolute inset-0 bg-grid opacity-[0.06]" />
-      <div className="container-grid relative py-16 lg:py-24">
-        <div className="grid items-center gap-10 lg:grid-cols-2">
-        <div className="reveal">
+      <div className="container-grid relative py-12 lg:py-16">
+        <div className="reveal max-w-4xl">
           <span className="section-eyebrow text-accent">
             <MapPin className="h-4 w-4" /> {heroContent.areaNote}
           </span>
+
           <h1 className="heading-display mt-4 text-4xl leading-[1.1] sm:text-5xl lg:text-6xl">
             {heroContent.h1Lead}{" "}
             <span className="text-accent">{heroContent.h1Highlight}</span>
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
+
+          <p className="mt-5 max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
             {heroContent.subtitle}
           </p>
 
@@ -37,6 +34,7 @@ export default function Hero() {
             >
               <MessageCircle className="h-4 w-4" /> WhatsApp'tan Teklif Al
             </a>
+
             <a
               href={getPhoneLink()}
               data-cta="hero-call"
@@ -45,6 +43,7 @@ export default function Hero() {
             >
               <Phone className="h-4 w-4" /> Hemen Ara
             </a>
+
             <a
               href="#teklif-al"
               data-cta="hero-quote"
@@ -62,18 +61,6 @@ export default function Hero() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="reveal relative">
-          <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
-            <Image
-              src={HERO_IMG}
-              alt="Usta Renovasyon hizmet ve iletişim görseli"
-              className="aspect-[4/3] w-full"
-              fittingType="fill"
-            />
-          </div>
-        </div>
         </div>
       </div>
     </section>
