@@ -60,13 +60,6 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
 
-          deploy = Path('.github/workflows/deploy.yml')
-          s = deploy.read_text()
-          s = s.replace('uses: actions/checkout@v6', 'uses: actions/checkout@v4')
-          s = s.replace('          cache: npm\n', '')
-          s = s.replace('run: npm ci', 'run: npm install --no-audit --no-fund')
-          deploy.write_text(s)
-
           css = Path('src/index.css')
           c = css.read_text()
           imp = "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');\n"
@@ -122,14 +115,13 @@ jobs:
           test "$(wc -l < public/routes.txt)" -ge 200
           echo "Routes: $(wc -l < public/routes.txt)"
 
-      - name: Commit clean permanent source tree
+      - name: Commit normal site source without workflow mutations
         shell: bash
         run: |
           set -euo pipefail
           rm -rf .bootstrap-min .bootstrap
-          rm -f .github/workflows/bootstrap.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add -A -- . ':(exclude).github/workflows/**'
           git commit -m "Install independent GitHub Pages site"
           git push origin HEAD:main
