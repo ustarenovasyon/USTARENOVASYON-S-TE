@@ -11,6 +11,7 @@ Bu repository Usta Renovasyon'un herhangi bir uygulama oluşturucuya veya uygula
 - Fotoğraflar: yalnızca cihaz içi önizleme; sunucuya yüklenmez
 - Yönetim paneli / kullanıcı girişi / veritabanı yoktur
 - Ana sayfa hero alanı hareketli video yerine yerel, yüksek çözünürlüklü sabit görsel kullanır.
+- Yapay zekâ asistanı ve sağ taraftaki yüzen sohbet balonları kullanıcı isteğiyle devre dışıdır.
 
 ## Yerel çalıştırma
 
