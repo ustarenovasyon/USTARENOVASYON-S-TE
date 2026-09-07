@@ -53,18 +53,27 @@ jobs:
           echo "21aa3be7567839fb699810a8b10eab220b6dc6d15ee6f3009e4e5e5865829b45  /tmp/usta-source.tar.xz" | sha256sum --check --strict
           tar -xJf /tmp/usta-source.tar.xz -C .
 
-      - name: Normalize permanent deployment workflow
+      - name: Normalize source for permanent GitHub hosting
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          p = Path('.github/workflows/deploy.yml')
-          s = p.read_text()
+
+          deploy = Path('.github/workflows/deploy.yml')
+          s = deploy.read_text()
           s = s.replace('uses: actions/checkout@v6', 'uses: actions/checkout@v4')
           s = s.replace('          cache: npm\n', '')
           s = s.replace('run: npm ci', 'run: npm install --no-audit --no-fund')
-          p.write_text(s)
+          deploy.write_text(s)
+
+          css = Path('src/index.css')
+          c = css.read_text()
+          imp = "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');\n"
+          if imp in c:
+              c = c.replace(imp, '').lstrip('\n')
+              c = imp + '\n' + c
+          css.write_text(c)
           PY
 
       - name: Verify Base44 is absent from source
@@ -113,16 +122,6 @@ jobs:
           test "$(wc -l < public/routes.txt)" -ge 200
           echo "Routes: $(wc -l < public/routes.txt)"
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./dist
-
       - name: Commit clean permanent source tree
         shell: bash
         run: |
@@ -132,20 +131,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          if git diff --cached --quiet; then
-            echo "No source changes to commit."
-          else
-            git commit -m "Install independent GitHub Pages site"
-            git push origin HEAD:main
-          fi
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: bootstrap-build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          git commit -m "Install independent GitHub Pages site"
+          git push origin HEAD:main
