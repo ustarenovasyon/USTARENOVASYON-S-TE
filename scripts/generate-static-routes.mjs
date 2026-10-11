@@ -10,6 +10,8 @@ if (!fs.existsSync(indexPath)) {
 }
 
 const html = fs.readFileSync(indexPath, "utf8");
+// Ana görsel yalnızca ana sayfada kullanılır; diğer yollar gereksiz indirmesin.
+const routeHtml = html.replace(/\s*<link\b[^>]*\bdata-home-hero\b[^>]*>/g, "");
 const routes = fs
   .readFileSync(routesPath, "utf8")
   .split(/\r?\n/)
@@ -20,9 +22,9 @@ for (const route of routes) {
   if (route === "/") continue;
   const dir = path.join(dist, route.replace(/^\//, ""));
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), html);
+  fs.writeFileSync(path.join(dir, "index.html"), routeHtml);
 }
 
 // Bilinmeyen SPA yollarında da React yönlendirmesinin açılabilmesi için fallback.
-fs.writeFileSync(path.join(dist, "404.html"), html);
+fs.writeFileSync(path.join(dist, "404.html"), routeHtml);
 console.log(`Static route copies generated: ${routes.length}`);
