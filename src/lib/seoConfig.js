@@ -20,7 +20,7 @@ export const seoConfig = {
 
   // Marka/paylaşım görseli — yönetici tanımlayana kadar boş (etiket eklenmez).
   defaultOgImage: "",
-  logoUrl: "",
+  logoUrl: "https://ustarenovasyon.com/assets/usta-renovasyon-logo.svg",
 
   // Sosyal — yalnızca gerçek hesap varsa doldurulur.
   twitterCard: "summary_large_image",
