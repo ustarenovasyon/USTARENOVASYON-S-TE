@@ -39,7 +39,7 @@ export default function SiteHeader() {
         }`}
       >
         <div className="container-grid flex h-16 items-center justify-between gap-4 lg:h-20">
-          <Logo variant="light" />
+          <Logo variant="light" className="flex-1 lg:flex-none" />
 
           <nav className="hidden items-center gap-5 lg:flex">
             {navLinks.map((l) =>
@@ -120,7 +120,7 @@ export default function SiteHeader() {
             onClick={() => setOpen(true)}
             aria-label="Menüyü aç"
             aria-expanded={open}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-white hover:bg-white/10 lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center shrink-0 rounded-lg text-white hover:bg-white/10 lg:hidden"
           >
             <Menu className="h-6 w-6" />
           </button>
