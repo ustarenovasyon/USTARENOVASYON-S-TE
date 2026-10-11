@@ -11,7 +11,7 @@ export default function Logo({ variant = "light", className = "" }) {
       aria-label={`${siteConfig.brandName} — Ana sayfa`}
     >
       <img
-        src="/assets/usta-renovasyon-logo.svg"
+        src="/assets/usta-renovasyon-logo.svg?v=horizontal-1"
         alt={siteConfig.brandName}
         width="1688"
         height="245"
