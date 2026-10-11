@@ -48,14 +48,14 @@ export default function Services() {
 
   return (
     <div>
-      <section className="border-b border-border bg-primary text-white">
+      <section className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-14 lg:py-20">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">Hizmetlerimiz</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl lg:text-5xl">
               Tadilat, Boya, Sıva ve İzolasyon Hizmetlerimiz
             </h1>
-            <p className="mt-4 text-white/70">
+            <p className="mt-4 text-muted-foreground">
               Usta Renovasyon olarak alçı, sıva, iç ve dış cephe boya, mineral sıva, çatı izolasyonu, su yalıtımı,
               mantolama, alçıpan, dekorasyon ve anahtar teslim tadilat alanlarında profesyonel çözümler sunuyoruz.
               Başta Bornova olmak üzere İzmir geneline hizmet veriyoruz.
@@ -64,10 +64,10 @@ export default function Services() {
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" data-cta="services-hero-whatsapp" onClick={() => trackCta("services-hero-whatsapp")} className="btn-accent">
                 <MessageCircle className="h-4 w-4" /> WhatsApp'tan Teklif Al
               </a>
-              <a href={getPhoneLink()} data-cta="services-hero-call" onClick={() => trackCta("services-hero-call")} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent">
+              <a href={getPhoneLink()} data-cta="services-hero-call" onClick={() => trackCta("services-hero-call")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent">
                 <Phone className="h-4 w-4" /> Hemen Ara
               </a>
-              <Link to="/#teklif-al" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">
+              <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                 Ücretsiz Keşif
               </Link>
             </div>

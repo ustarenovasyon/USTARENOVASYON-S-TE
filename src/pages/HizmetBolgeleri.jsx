@@ -78,15 +78,15 @@ export default function HizmetBolgeleri() {
     <article>
       <Breadcrumb items={[{ name: "Ana Sayfa", to: "/" }, { name: "Hizmet Bölgeleri" }]} />
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">Hizmet Bölgeleri</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">İzmir Boya, Alçı, İzolasyon ve Tadilat Hizmet Bölgeleri</h1>
-            <p className="mt-4 text-white/70">
+            <p className="mt-4 text-muted-foreground">
               Usta Renovasyon, Özal Usta yönetiminde başta Bornova olmak üzere İzmir'in farklı ilçelerinde boya, alçı, sıva, çatı izolasyonu, su yalıtımı, mantolama, alçıpan ve tadilat hizmetleri sunmaktadır. Hizmet uygunluğu; yapılacak işin türü, büyüklüğü, konumu ve çalışma planına göre değerlendirilir.
             </p>
-            <div className="mt-5 flex flex-wrap gap-3 text-xs text-white/70">
+            <div className="mt-5 flex flex-wrap gap-3 text-xs text-muted-foreground">
               <span><MapPin className="mr-1 inline h-3.5 w-3.5 text-accent" /> {merged.length} ilçe</span>
               <span>{publishedCount} detay sayfası yayında</span>
               <span>{bornova?.name ? `${bornova.name} ana bölge` : "Bornova ana bölge"}</span>

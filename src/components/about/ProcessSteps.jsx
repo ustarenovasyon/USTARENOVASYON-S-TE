@@ -8,7 +8,7 @@ export default function ProcessSteps({ steps }) {
       {steps.map((s, i) => (
         <Reveal as="li" key={i} delay={i * 60}>
           <div className="flex h-full gap-4 rounded-xl border border-border bg-card p-5">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-accent-foreground">
               {i + 1}
             </span>
             <div>

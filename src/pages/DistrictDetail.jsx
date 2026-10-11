@@ -151,16 +151,16 @@ export default function DistrictDetail() {
     <article>
       <Breadcrumb items={[{ name: "Ana Sayfa", to: "/" }, { name: "Hizmet Bölgeleri", to: "/hizmet-bolgeleri" }, { name: area.name }]} />
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <Reveal className="max-w-2xl">
             <span className="section-eyebrow text-accent">Hizmet Bölgesi</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">{content.hero_title}</h1>
-            <p className="mt-4 text-white/70">{content.short_description}</p>
-            <p className="mt-2 flex items-center gap-1.5 text-sm text-white/60"><MapPin className="h-4 w-4" /> {area.name} / İzmir · {SERVICE_STATUS_LABELS[area.service_status] || "Talebe Göre Değerlendiriliyor"}</p>
+            <p className="mt-4 text-muted-foreground">{content.short_description}</p>
+            <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground"><MapPin className="h-4 w-4" /> {area.name} / İzmir · {SERVICE_STATUS_LABELS[area.service_status] || "Talebe Göre Değerlendiriliyor"}</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" data-cta="district-hero-whatsapp" onClick={() => trackCta("district-hero-whatsapp", { district: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Bilgi Al</a>
-              <a href={getPhoneLink()} data-cta="district-hero-call" onClick={() => trackCta("district-hero-call", { district: slug })} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
+              <a href={getPhoneLink()} data-cta="district-hero-call" onClick={() => trackCta("district-hero-call", { district: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
             </div>
           </Reveal>
         </div>
@@ -281,10 +281,10 @@ export default function DistrictDetail() {
               <div className="rounded-xl border border-border bg-card p-5">
                 <PageToc items={toc} />
               </div>
-              <div className="rounded-xl border border-border bg-primary p-5 text-white">
+              <div className="rounded-xl border border-border bg-secondary p-5 text-foreground">
                 <p className="text-sm font-semibold">{area.name} için teklif alın.</p>
                 <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" className="btn-accent mt-3 w-full"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
-                <a href={getPhoneLink()} className="btn-outline mt-2 w-full border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Ara</a>
+                <a href={getPhoneLink()} className="btn-outline mt-2 w-full border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Ara</a>
               </div>
             </div>
           </aside>

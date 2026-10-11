@@ -12,12 +12,12 @@ const PHOTO_MSG =
 function Field({ label, required, error, children }) {
   return (
     <div>
-      <label className="mb-1.5 block text-sm font-medium text-white/80">
+      <label className="mb-1.5 block text-sm font-medium text-foreground">
         {label}
         {required && <span className="text-accent"> *</span>}
       </label>
       {children}
-      {error && <p className="mt-1 text-xs text-red-300">{error}</p>}
+      {error && <p className="mt-1 text-xs text-red-700">{error}</p>}
     </div>
   );
 }
@@ -65,14 +65,14 @@ export default function QuoteSection() {
   };
 
   return (
-    <section id="teklif-al" className="bg-primary text-white">
+    <section id="teklif-al" className="bg-secondary text-foreground">
       <div className="container-grid py-16 lg:py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="section-eyebrow text-accent">Ücretsiz Keşif & Teklif</span>
           <h2 className="heading-display mt-3 text-3xl sm:text-4xl">
             Yapılacak İş İçin Bilgi ve Fiyat Teklifi Alın
           </h2>
-          <p className="mt-4 text-white/70">
+          <p className="mt-4 text-muted-foreground">
             Yapılacak alanın fotoğraflarını WhatsApp üzerinden gönderebilir, hizmet hakkında bilgi
             alabilir veya ücretsiz keşif talebi oluşturabilirsiniz.
           </p>
@@ -91,7 +91,7 @@ export default function QuoteSection() {
               href={getPhoneLink()}
               data-cta="quote-call"
               onClick={() => trackCta("quote-call")}
-              className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"
+              className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"
             >
               <Phone className="h-4 w-4" /> Hemen Ara
             </a>
@@ -101,11 +101,11 @@ export default function QuoteSection() {
         <div className="mx-auto mt-12 max-w-2xl">
           {status === "success" ? (
             <div className="rounded-xl border border-green-400/30 bg-green-500/10 p-6 text-center">
-              <CheckCircle2 className="mx-auto h-10 w-10 text-green-400" />
-              <h3 className="mt-3 font-heading text-lg font-bold text-white">
+              <CheckCircle2 className="mx-auto h-10 w-10 text-green-700" />
+              <h3 className="mt-3 font-heading text-lg font-bold text-foreground">
                 WhatsApp mesajınız hazırlandı
               </h3>
-              <p className="mt-1 text-sm text-white/70">
+              <p className="mt-1 text-sm text-muted-foreground">
                 Açılan WhatsApp ekranındaki mesajı gönderdiğinizde talebiniz doğrudan Özal Usta’ya ulaşır.
               </p>
               <a
@@ -120,7 +120,7 @@ export default function QuoteSection() {
           ) : (
             <form
               onSubmit={submit}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8"
+              className="rounded-2xl border border-border bg-card p-6 sm:p-8"
               noValidate
             >
               <div className="grid gap-4 sm:grid-cols-2">
@@ -189,16 +189,16 @@ export default function QuoteSection() {
                 </Field>
               </div>
 
-              <label className="mt-4 flex items-start gap-2.5 text-sm text-white/70">
+              <label className="mt-4 flex items-start gap-2.5 text-sm text-muted-foreground">
                 <input
                   type="checkbox"
                   checked={form.kvkk}
                   onChange={(e) => update("kvkk", e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-white/30 bg-transparent accent-accent"
+                  className="mt-1 h-4 w-4 rounded border-border bg-transparent accent-accent"
                 />
                 <span>
                   KVKK aydınlatma metnini okudum, bilgilerimin iletişim amacıyla işlenmesini onaylıyorum.
-                  {errors.kvkk && <span className="block text-red-300">{errors.kvkk}</span>}
+                  {errors.kvkk && <span className="block text-red-700">{errors.kvkk}</span>}
                 </span>
               </label>
 
@@ -220,7 +220,7 @@ export default function QuoteSection() {
               </button>
 
               {status === "error" && (
-                <p className="mt-3 text-sm text-red-300">
+                <p className="mt-3 text-sm text-red-700">
                   Talebiniz gönderilemedi. Lütfen telefon numaranızı kontrol edip yeniden deneyin veya
                   WhatsApp'tan yazın.
                 </p>

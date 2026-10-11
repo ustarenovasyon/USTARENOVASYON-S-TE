@@ -60,18 +60,18 @@ export default function Sss() {
     <article>
       <Breadcrumb items={[{ name: "Ana Sayfa", to: "/" }, { name: "Sık Sorulan Sorular" }]} />
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">S.S.S.</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">Tadilat ve Renovasyon Hakkında Sık Sorulan Sorular</h1>
-            <p className="mt-4 text-white/70">Boya, alçı, sıva, izolasyon, tadilat, keşif, fiyatlandırma ve hizmet bölgeleri hakkında sık sorulan soruların cevaplarını inceleyin.</p>
+            <p className="mt-4 text-muted-foreground">Boya, alçı, sıva, izolasyon, tadilat, keşif, fiyatlandırma ve hizmet bölgeleri hakkında sık sorulan soruların cevaplarını inceleyin.</p>
           </div>
           <div className="mt-8 max-w-xl">
             <label htmlFor="sss-search" className="sr-only">Sorunuzu arayın</label>
-            <div className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-3.5 py-2.5">
-              <Search className="h-4 w-4 text-white/60" />
-              <input id="sss-search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Sorunuzu arayın..." className="w-full bg-transparent text-sm text-white outline-none placeholder:text-white/40" />
+            <div className="flex items-center gap-2 rounded-xl border border-border bg-card px-3.5 py-2.5">
+              <Search className="h-4 w-4 text-muted-foreground" />
+              <input id="sss-search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Sorunuzu arayın..." className="w-full bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" />
             </div>
           </div>
         </div>

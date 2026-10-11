@@ -47,7 +47,7 @@ export default function ServiceCard({ categoryKey, services = [] }) {
           rel="noopener noreferrer"
           data-cta="service-card-quote"
           onClick={() => trackCta("service-card-quote", { category: categoryKey })}
-          className="inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-3 py-2 text-xs font-semibold text-accent transition-colors hover:bg-accent hover:text-primary"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-3 py-2 text-xs font-semibold text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
         >
           <MessageCircle className="h-4 w-4" /> Teklif Al
         </a>

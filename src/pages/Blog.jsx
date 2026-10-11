@@ -91,19 +91,19 @@ export default function Blog() {
     <article>
       <Breadcrumb items={[{ name: "Ana Sayfa", to: "/" }, { name: "Blog" }]} />
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">Rehber</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">Tadilat ve Dekorasyon Rehberi</h1>
-            <p className="mt-4 text-white/70">
+            <p className="mt-4 text-muted-foreground">
               Boya, tadilat, izolasyon, çatı, alçı, sıva, dekorasyon ve ev yenileme hakkında merak ettiğiniz faydalı bilgileri Usta Renovasyon rehberinde bulabilirsiniz.
             </p>
-            <p className="mt-2 text-sm text-white/50">
+            <p className="mt-2 text-sm text-muted-foreground">
               İşleme başlamadan önce dikkat edilmesi gerekenleri öğrenin, doğru hizmeti inceleyin ve ihtiyaç duyduğunuzda Özal Usta'ya ulaşın.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link to="/hizmetler" className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent">Hizmetleri İncele</Link>
+              <Link to="/hizmetler" className="btn-outline border-border text-foreground hover:border-accent hover:text-accent">Hizmetleri İncele</Link>
               <a href={getWhatsAppLink(AREA_MSG)} target="_blank" rel="noopener noreferrer" data-cta="blog-hero-whatsapp" onClick={() => trackCta("blog-hero-whatsapp")} className="btn-accent"><MessageCircle className="h-4 w-4" /> Özal Usta'ya Sor</a>
             </div>
           </div>
@@ -111,16 +111,16 @@ export default function Blog() {
           {/* Arama */}
           <div className="mt-8 max-w-xl">
             <label htmlFor="blog-search" className="sr-only">Rehberde ara</label>
-            <div className="flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 px-3.5 py-2.5 focus-within:border-accent">
-              <Search className="h-4 w-4 text-white/60" />
+            <div className="flex items-center gap-2 rounded-xl border border-border bg-card px-3.5 py-2.5 focus-within:border-accent">
+              <Search className="h-4 w-4 text-muted-foreground" />
               <input
                 id="blog-search"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Rehberde ara…"
-                className="w-full bg-transparent text-sm text-white outline-none placeholder:text-white/40"
+                className="w-full bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground"
               />
-              {q && <button onClick={clearSearch} aria-label="Aramayı temizle" className="text-white/60 hover:text-white"><X className="h-4 w-4" /></button>}
+              {q && <button onClick={clearSearch} aria-label="Aramayı temizle" className="text-muted-foreground hover:text-accent"><X className="h-4 w-4" /></button>}
             </div>
           </div>
         </div>
@@ -203,13 +203,13 @@ export default function Blog() {
         </section>
       </div>
 
-      <section className="bg-primary text-white">
+      <section className="bg-secondary text-foreground">
         <div className="container-grid flex flex-col items-center gap-6 py-16 text-center">
           <h2 className="heading-display max-w-2xl text-3xl sm:text-4xl">Bir Konuda mı Takıldınız?</h2>
-          <p className="max-w-xl text-white/70">Yapılacak iş hakkında bilgi ve fiyat teklifi için Özal Usta'ya ulaşın. Fotoğraf göndererek ön bilgi alabilirsiniz.</p>
+          <p className="max-w-xl text-muted-foreground">Yapılacak iş hakkında bilgi ve fiyat teklifi için Özal Usta'ya ulaşın. Fotoğraf göndererek ön bilgi alabilirsiniz.</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={getWhatsAppLink(AREA_MSG)} target="_blank" rel="noopener noreferrer" data-cta="blog-final-whatsapp" onClick={() => trackCta("blog-final-whatsapp")} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Fotoğraf Gönder</a>
-            <Link to="/teklif-al" className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent">Teklif Al</Link>
+            <Link to="/teklif-al" className="btn-outline border-border text-foreground hover:border-accent hover:text-accent">Teklif Al</Link>
           </div>
         </div>
       </section>

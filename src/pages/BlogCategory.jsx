@@ -51,12 +51,12 @@ export default function BlogCategory() {
     <article>
       <Breadcrumb items={[{ name: "Ana Sayfa", to: "/" }, { name: "Blog", to: "/blog" }, { name: cat.name }]} />
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">Blog Kategorisi</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">{cat.name}</h1>
-            <p className="mt-4 text-white/70">{cat.description}</p>
+            <p className="mt-4 text-muted-foreground">{cat.description}</p>
             <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" data-cta="blogcat-whatsapp" onClick={() => trackCta("blogcat-whatsapp")} className="btn-accent mt-6"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Sor</a>
           </div>
         </div>

@@ -103,17 +103,17 @@ export default function Iletisim() {
       </div>
 
       {/* Hero */}
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">İletişim</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">Usta Renovasyon İletişim</h1>
-            <p className="mt-4 text-white/70">Boya, alçı, sıva, dış cephe, çatı izolasyonu, su yalıtımı veya tadilat ihtiyaçlarınız için telefon, WhatsApp ya da iletişim formu üzerinden ulaşabilirsiniz.</p>
+            <p className="mt-4 text-muted-foreground">Boya, alçı, sıva, dış cephe, çatı izolasyonu, su yalıtımı veya tadilat ihtiyaçlarınız için telefon, WhatsApp ya da iletişim formu üzerinden ulaşabilirsiniz.</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getPhoneLink()} data-cta="iletisim-hero-call" onClick={() => trackCta("iletisim-hero-call")} className="btn-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
-              <a href={getWhatsAppLink(PHOTOS_MSG)} target="_blank" rel="noopener noreferrer" data-cta="iletisim-hero-whatsapp" onClick={() => trackCta("iletisim-hero-whatsapp")} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Yaz</a>
-              <Link to="/teklif-al" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Teklif Al</Link>
-              <Link to="/ucretsiz-kesif" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Ücretsiz Keşif Talep Et</Link>
+              <a href={getWhatsAppLink(PHOTOS_MSG)} target="_blank" rel="noopener noreferrer" data-cta="iletisim-hero-whatsapp" onClick={() => trackCta("iletisim-hero-whatsapp")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Yaz</a>
+              <Link to="/teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Teklif Al</Link>
+              <Link to="/ucretsiz-kesif" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
             </div>
           </div>
         </div>
@@ -193,11 +193,11 @@ export default function Iletisim() {
             <div className="mt-6"><ContactForm /></div>
           </div>
           <aside className="space-y-4">
-            <div className="rounded-xl border border-border bg-primary p-5 text-white">
+            <div className="rounded-xl border border-border bg-secondary p-5 text-foreground">
               <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-accent">Özal Usta'ya Doğrudan Ulaşın</h3>
               <a href={getPhoneLink()} data-cta="iletisim-side-call" onClick={() => trackCta("iletisim-side-call")} className="btn-accent mt-3 w-full"><Phone className="h-4 w-4" /> Hemen Ara</a>
-              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" data-cta="iletisim-side-whatsapp" onClick={() => trackCta("iletisim-side-whatsapp")} className="btn-outline mt-2 w-full border-white/20 text-white hover:border-accent hover:text-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Yaz</a>
-              <Link to="/ucretsiz-kesif" className="btn-secondary mt-2 w-full border-white/30 text-white hover:bg-white hover:text-primary">Ücretsiz Keşif</Link>
+              <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" data-cta="iletisim-side-whatsapp" onClick={() => trackCta("iletisim-side-whatsapp")} className="btn-outline mt-2 w-full border-border text-foreground hover:border-accent hover:text-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Yaz</a>
+              <Link to="/ucretsiz-kesif" className="btn-secondary mt-2 w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif</Link>
             </div>
           </aside>
         </section>

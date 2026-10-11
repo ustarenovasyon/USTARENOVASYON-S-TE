@@ -181,7 +181,7 @@ export default function DetailedQuoteForm() {
       <div className="mb-6 flex items-center gap-2 overflow-x-auto pb-2">
         {steps.map((s, i) => (
           <button key={s} type="button" onClick={() => i < step && setStep(i)} className={`flex shrink-0 items-center gap-1.5 text-xs font-medium ${i === step ? "text-accent" : i < step ? "text-primary" : "text-muted-foreground"}`}>
-            <span className={`flex h-6 w-6 items-center justify-center rounded-full text-[11px] ${i === step ? "bg-accent text-primary" : i < step ? "bg-primary text-white" : "bg-muted text-muted-foreground"}`}>{i + 1}</span>
+            <span className={`flex h-6 w-6 items-center justify-center rounded-full text-[11px] ${i === step ? "bg-accent text-accent-foreground" : i < step ? "bg-accent text-accent-foreground" : "bg-muted text-muted-foreground"}`}>{i + 1}</span>
             {s}
           </button>
         ))}

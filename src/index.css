@@ -7,42 +7,42 @@
 
 @layer base {
   :root {
-    /* Plaster White canvas */
-    --background: 240 5% 98%;
-    --foreground: 222 47% 11%;
+    /* Açık tema: kırık beyaz #F8FAFC, koyu füme #17343A */
+    --background: 210.00000 40.00000% 98.03922%;
+    --foreground: 190.28571 43.20988% 15.88235%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 0.00000 0.00000% 100.00000%;
+    --card-foreground: 190.28571 43.20988% 15.88235%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 0.00000 0.00000% 100.00000%;
+    --popover-foreground: 190.28571 43.20988% 15.88235%;
 
-    /* Deep Sapphire Navy — structural foundation */
-    --primary: 222 47% 11%;
-    --primary-foreground: 0 0% 100%;
+    /* Koyu turkuaz #00777E — butonlar, bağlantılar ve odak */
+    --primary: 183.33333 100.00000% 24.70588%;
+    --primary-foreground: 0.00000 0.00000% 100.00000%;
 
-    --secondary: 210 16% 93%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 175.38462 39.39394% 93.52941%;
+    --secondary-foreground: 190.28571 43.20988% 15.88235%;
 
-    --muted: 210 16% 95%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 172.50000 33.33333% 95.29412%;
+    --muted-foreground: 188.82353 18.88889% 35.29412%;
 
-    /* Safety Amber Orange — action zones */
-    --accent: 38 92% 50%;
-    --accent-foreground: 222 47% 11%;
+    /* Turkuaz vurgu; dolu butonlar üzerinde beyaz yazı */
+    --accent: 183.33333 100.00000% 24.70588%;
+    --accent-foreground: 0.00000 0.00000% 100.00000%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 215 16% 88%;
-    --input: 215 16% 88%;
-    --ring: 38 92% 50%;
+    --border: 169.09091 25.00000% 82.74510%;
+    --input: 169.09091 25.00000% 82.74510%;
+    --ring: 183.33333 100.00000% 24.70588%;
 
-    --chart-1: 222 47% 11%;
-    --chart-2: 38 92% 50%;
-    --chart-3: 173 58% 39%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --chart-1: 183.33333 100.00000% 24.70588%;
+    --chart-2: 190.28571 43.20988% 15.88235%;
+    --chart-3: 182.80374 51.19617% 40.98039%;
+    --chart-4: 182.19512 36.28319% 55.68627%;
+    --chart-5: 181.09091 36.91275% 70.78431%;
 
     --radius: 0.5rem;
 
@@ -51,14 +51,14 @@
     --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 38 92% 50%;
-    --sidebar-primary-foreground: 222 47% 11%;
-    --sidebar-accent: 222 40% 18%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 222 35% 22%;
-    --sidebar-ring: 38 92% 50%;
+    --sidebar-background: 175.38462 39.39394% 93.52941%;
+    --sidebar-foreground: 190.28571 43.20988% 15.88235%;
+    --sidebar-primary: 183.33333 100.00000% 24.70588%;
+    --sidebar-primary-foreground: 0.00000 0.00000% 100.00000%;
+    --sidebar-accent: 174.78261 37.70492% 88.03922%;
+    --sidebar-accent-foreground: 190.28571 43.20988% 15.88235%;
+    --sidebar-border: 169.09091 25.00000% 82.74510%;
+    --sidebar-ring: 183.33333 100.00000% 24.70588%;
   }
 }
 
@@ -80,6 +80,7 @@
     @apply bg-background text-foreground font-body antialiased;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    color-scheme: light;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -112,7 +113,7 @@
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:brightness-105 hover:shadow-lg hover:shadow-accent/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:brightness-105 hover:shadow-lg hover:shadow-accent/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98];
   }
 
   .btn-navy {
@@ -124,7 +125,7 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-primary bg-transparent px-6 py-3 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-white hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-60;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-primary bg-transparent px-6 py-3 text-sm font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-60;
   }
 
   .btn-link {
@@ -132,7 +133,7 @@
   }
 
   .form-input {
-    @apply w-full rounded-lg border border-white/15 bg-white/5 px-3.5 py-2.5 text-sm text-white outline-none transition-colors placeholder:text-white/40 focus:border-accent focus:bg-white/10;
+    @apply w-full rounded-lg border border-input bg-card px-3.5 py-2.5 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-accent focus:ring-2 focus:ring-ring/20;
   }
 }
 

@@ -106,12 +106,12 @@ export default function BlogDetail() {
     <article>
       <Breadcrumb items={[{ name: "Ana Sayfa", to: "/" }, { name: "Blog", to: "/blog" }, { name: catName, to: `/blog/kategori/${post.category}` }, { name: post.title }]} />
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-10 lg:py-14">
           <Link to={`/blog/kategori/${post.category}`} className="inline-flex rounded-md bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent">{catName}</Link>
           <h1 className="heading-display mt-4 max-w-3xl text-3xl sm:text-4xl">{post.title}</h1>
-          {post.summary && <p className="mt-4 max-w-2xl text-white/70">{post.summary}</p>}
-          <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-white/60">
+          {post.summary && <p className="mt-4 max-w-2xl text-muted-foreground">{post.summary}</p>}
+          <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
             <span className="flex items-center gap-1.5"><User className="h-3.5 w-3.5" /> {post.author || "Özal Usta"}</span>
             <span className="flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" /> {formatDate(post.published_date)}</span>
             {post.updated_date && <span className="flex items-center gap-1.5">Son güncelleme: {formatDate(post.updated_date)}</span>}
@@ -190,7 +190,7 @@ export default function BlogDetail() {
             {/* Yazar kutusu */}
             <section className="mt-12 rounded-2xl border border-border bg-card p-6">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white"><User className="h-5 w-5" /></div>
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground"><User className="h-5 w-5" /></div>
                 <div>
                   <p className="font-heading font-bold">{post.author || "Özal Usta"}</p>
                   <p className="mt-1 text-sm text-muted-foreground">Usta Renovasyon — Bornova / İzmir. Boya, alçı, sıva, izolasyon ve tadilat hizmetleri. İletişim: {siteConfig.phone.display}.</p>
@@ -212,10 +212,10 @@ export default function BlogDetail() {
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-4">
               <TableOfContents sections={tocSections} />
-              <div className="rounded-xl border border-border bg-primary p-5 text-white">
+              <div className="rounded-xl border border-border bg-secondary p-5 text-foreground">
                 <p className="text-sm font-semibold">Bu konu hakkında teklif alın.</p>
                 <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" className="btn-accent mt-3 w-full"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
-                <a href={getPhoneLink()} className="btn-outline mt-2 w-full border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Ara</a>
+                <a href={getPhoneLink()} className="btn-outline mt-2 w-full border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Ara</a>
               </div>
             </div>
           </aside>

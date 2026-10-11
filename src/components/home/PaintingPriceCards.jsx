@@ -61,7 +61,7 @@ export default function PaintingPriceCards() {
                     : "border-border hover:border-accent/50 hover:shadow-md"
                 }`}
               >
-                <span className="flex h-5 w-5 items-center justify-center rounded bg-primary text-white sm:h-6 sm:w-6">
+                <span className="flex h-5 w-5 items-center justify-center rounded bg-accent text-accent-foreground sm:h-6 sm:w-6">
                   <Home className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                 </span>
                 <span className="mt-1 font-heading text-[11px] font-extrabold leading-tight text-red-600 sm:text-sm">

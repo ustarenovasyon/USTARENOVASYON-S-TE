@@ -34,8 +34,8 @@ export default function SiteHeader() {
       <header
         className={`sticky top-0 z-50 border-b transition-all ${
           scrolled
-            ? "border-white/10 bg-primary shadow-lg"
-            : "border-transparent bg-primary/85 backdrop-blur"
+            ? "border-border bg-secondary shadow-lg"
+            : "border-border bg-secondary/95 backdrop-blur"
         }`}
       >
         <div className="container-grid flex h-16 items-center justify-between gap-4 lg:h-20">
@@ -47,7 +47,7 @@ export default function SiteHeader() {
                 <div key={l.label} className="group relative">
                   <Link
                     to={l.to}
-                    className="flex items-center gap-1 text-[13px] font-medium text-white/80 transition-colors hover:text-accent"
+                    className="flex items-center gap-1 text-[13px] font-medium text-foreground transition-colors hover:text-accent"
                   >
                     {l.label}
                     <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
@@ -76,7 +76,7 @@ export default function SiteHeader() {
                 <a
                   key={l.label}
                   href={l.to}
-                  className="text-[13px] font-medium text-white/80 transition-colors hover:text-accent"
+                  className="text-[13px] font-medium text-foreground transition-colors hover:text-accent"
                 >
                   {l.label}
                 </a>
@@ -86,7 +86,7 @@ export default function SiteHeader() {
                   to={l.to}
                   className={({ isActive }) =>
                     `text-[13px] font-medium transition-colors ${
-                      isActive ? "text-accent" : "text-white/80 hover:text-accent"
+                      isActive ? "text-accent" : "text-foreground hover:text-accent"
                     }`
                   }
                 >
@@ -101,7 +101,7 @@ export default function SiteHeader() {
               href={getPhoneLink()}
               data-cta="header-phone"
               onClick={() => trackCta("header-phone")}
-              className="text-[13px] font-medium text-white/70 transition-colors hover:text-white"
+              className="text-[13px] font-medium text-muted-foreground transition-colors hover:text-accent"
             >
               {siteConfig.phone.display}
             </a>
@@ -120,7 +120,7 @@ export default function SiteHeader() {
             onClick={() => setOpen(true)}
             aria-label="Menüyü aç"
             aria-expanded={open}
-            className="inline-flex h-11 w-11 items-center justify-center shrink-0 rounded-lg text-white hover:bg-white/10 lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center shrink-0 rounded-lg text-foreground hover:bg-accent/10 lg:hidden"
           >
             <Menu className="h-6 w-6" />
           </button>

@@ -24,7 +24,7 @@ export const aboutContent = {
   ozalTitle: "Özal Usta ile Doğrudan İletişim",
   ozalText:
     "Usta Renovasyon'un kurucusu ve hizmet yetkilisi Özal Usta'dır. Müşteriler yapılacak iş hakkında aracı olmadan doğrudan Özal Usta ile iletişim kurabilir.\n\nTalep alınırken işin türü, konumu, alanın mevcut durumu ve müşterinin beklentileri dinlenir. Mümkünse fotoğraflar üzerinden ön değerlendirme yapılır; gerekli durumlarda keşif planlanır.\n\nAmaç, ihtiyaç duyulmayan işlemleri eklemek yerine mevcut sorunu doğru değerlendirmek ve uygulanabilecek çözüm seçenekleri hakkında müşteriye açık bilgi vermektir.",
-  ozalPhoto: "/assets/brand-contact.svg", // Kurumsal iletişim görseli; kişi portresi olarak kullanılmaz.
+  ozalPhoto: "/assets/brand-contact.svg?v=turquoise-light-1", // Kurumsal iletişim görseli; kişi portresi olarak kullanılmaz.
 
   approachTitle: "Çalışma Anlayışımız",
   approachText:

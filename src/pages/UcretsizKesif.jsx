@@ -31,13 +31,13 @@ export default function UcretsizKesif() {
 
   return (
     <section className="bg-background">
-      <div className="border-b border-border bg-primary text-white">
+      <div className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">Ücretsiz Keşif</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">Ücretsiz Keşif Talebi Oluşturun</h1>
-            <p className="mt-4 text-white/70">Yapılacak işin konumunu, hizmet türünü ve uygun olduğunuz zamanları belirtin. Talebiniz incelendikten sonra keşif planlaması için sizinle iletişime geçilecektir.</p>
-            <p className="mt-3 inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm text-white/80"><ShieldCheck className="h-4 w-4 text-accent" /> Talep gönderildiğinde randevu kesinleşmiş sayılmaz; tarih ve saat iletişim sonrası netleştirilir.</p>
+            <p className="mt-4 text-muted-foreground">Yapılacak işin konumunu, hizmet türünü ve uygun olduğunuz zamanları belirtin. Talebiniz incelendikten sonra keşif planlaması için sizinle iletişime geçilecektir.</p>
+            <p className="mt-3 inline-flex items-center gap-2 rounded-lg bg-card px-3 py-2 text-sm text-foreground"><ShieldCheck className="h-4 w-4 text-accent" /> Talep gönderildiğinde randevu kesinleşmiş sayılmaz; tarih ve saat iletişim sonrası netleştirilir.</p>
           </div>
         </div>
       </div>

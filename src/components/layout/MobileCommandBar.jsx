@@ -21,14 +21,14 @@ export default function MobileCommandBar() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-50 grid ${cols} border-t border-white/10 bg-primary/95 backdrop-blur md:hidden`}
+      className={`fixed inset-x-0 bottom-0 z-50 grid ${cols} border-t border-border bg-secondary/95 backdrop-blur md:hidden`}
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <a
         href={getPhoneLink()}
         data-cta="mobile-call"
         onClick={() => trackCta("mobile-call")}
-        className="flex flex-col items-center justify-center gap-1 py-2.5 text-white active:bg-white/5"
+        className="flex flex-col items-center justify-center gap-1 py-2.5 text-foreground active:bg-accent/10"
         aria-label={`Hemen Ara: ${siteConfig.phone.display}`}
       >
         <Phone className="h-5 w-5 text-accent" />
@@ -40,7 +40,7 @@ export default function MobileCommandBar() {
           href={getEmailLink()}
           data-cta="mobile-email"
           onClick={() => trackCta("mobile-email")}
-          className="flex flex-col items-center justify-center gap-1 border-x border-white/10 py-2.5 text-white active:bg-white/5"
+          className="flex flex-col items-center justify-center gap-1 border-x border-border py-2.5 text-foreground active:bg-accent/10"
           aria-label="E-posta gönder"
         >
           <Mail className="h-5 w-5 text-accent" />
@@ -54,7 +54,7 @@ export default function MobileCommandBar() {
         rel="noopener noreferrer"
         data-cta="mobile-whatsapp"
         onClick={() => trackCta("mobile-whatsapp")}
-        className="flex flex-col items-center justify-center gap-1 py-2.5 text-white active:bg-white/5"
+        className="flex flex-col items-center justify-center gap-1 py-2.5 text-foreground active:bg-accent/10"
         aria-label="WhatsApp ile yaz"
       >
         <MessageCircle className="h-5 w-5 text-[#25D366]" />

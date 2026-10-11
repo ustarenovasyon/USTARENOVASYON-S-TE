@@ -48,7 +48,7 @@ export default function AssistantRequestForm({ sessionId, pageKey, collected, ph
 
   if (done) {
     return (
-      <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40 p-4">
+      <div className="fixed inset-0 z-[60] flex items-center justify-center bg-foreground/40 p-4">
         <div className="w-full max-w-md rounded-2xl bg-card p-6 text-center shadow-2xl">
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
             <Check className="h-6 w-6 text-green-600" />
@@ -66,11 +66,11 @@ export default function AssistantRequestForm({ sessionId, pageKey, collected, ph
   }
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-end justify-center bg-black/40 sm:items-center">
+    <div className="fixed inset-0 z-[60] flex items-end justify-center bg-foreground/40 sm:items-center">
       <div className="max-h-[90vh] w-full overflow-y-auto rounded-t-2xl bg-card p-5 shadow-2xl sm:max-w-lg sm:rounded-2xl">
         <div className="mb-4 flex items-center justify-between">
           <h2 className="font-heading text-lg font-bold">Talep Oluştur</h2>
-          <button onClick={onClose} className="rounded-lg p-1.5 hover:bg-slate-100"><X className="h-5 w-5" /></button>
+          <button onClick={onClose} className="rounded-lg p-1.5 hover:bg-muted"><X className="h-5 w-5" /></button>
         </div>
 
         {/* Konuşma özeti */}

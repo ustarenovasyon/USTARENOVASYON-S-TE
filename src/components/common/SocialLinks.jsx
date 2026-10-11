@@ -18,7 +18,7 @@ const ICON_MAP = {
 // Props:
 //  - title: opsiyonel başlık (varsa aktif hesaplarla birlikte gösterilir)
 //  - description: opsiyonel açıklama metni
-//  - variant: "light" (koyu zemin, beyaz ikon) | "solid" (marka rengi arka plan)
+//  - variant: "light" (açık kart, turkuaz hover) | "solid" (açık kart, belirgin ikon)
 //  - size: "sm" | "md" ikon boyutu
 //  - className: dış sarmalayıcı sınıf
 export default function SocialLinks({ title, description, variant = "light", className = "", size = "md" }) {
@@ -49,8 +49,8 @@ export default function SocialLinks({ title, description, variant = "light", cla
           const Icon = ICON_MAP[l.platform] || Share2;
           const baseCls =
             variant === "solid"
-              ? "text-white hover:brightness-110"
-              : "text-white/80 hover:text-white";
+              ? "text-foreground hover:brightness-110"
+              : "text-foreground hover:text-accent";
           return (
             <li key={l.id}>
               <a
@@ -59,7 +59,7 @@ export default function SocialLinks({ title, description, variant = "light", cla
                 rel="noopener noreferrer"
                 aria-label={meta.ariaLabel}
                 title={meta.label}
-                className={`inline-flex ${sizeCls} items-center justify-center rounded-lg border border-white/15 bg-white/5 transition-colors hover:border-accent hover:bg-white/10 ${baseCls}`}
+                className={`inline-flex ${sizeCls} items-center justify-center rounded-lg border border-border bg-card transition-colors hover:border-accent hover:bg-accent/10 ${baseCls}`}
               >
                 <Icon className={iconSize} aria-hidden="true" />
                 <span className="sr-only">{meta.label}</span>

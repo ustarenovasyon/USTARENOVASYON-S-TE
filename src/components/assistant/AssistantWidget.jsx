@@ -77,7 +77,7 @@ export default function AssistantWidget() {
         <div className="fixed bottom-48 right-4 z-30 max-w-[240px] rounded-2xl bg-card p-3 shadow-xl ring-1 ring-border md:bottom-40 md:right-20 md:max-w-xs">
           <button
             onClick={() => setBubble(false)}
-            className="absolute -right-2 -top-2 rounded-full bg-slate-200 p-1"
+            className="absolute -right-2 -top-2 rounded-full bg-secondary p-1"
             aria-label="Balonu kapat"
           >
             <X className="h-3 w-3" />
@@ -99,7 +99,7 @@ export default function AssistantWidget() {
         <button
           onClick={handleOpen}
           aria-label="Usta Renovasyon Dijital Asistanını Aç"
-          className="fixed bottom-32 right-4 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg ring-2 ring-accent transition-transform hover:scale-105 md:bottom-24 md:right-20 md:h-14 md:w-14"
+          className="fixed bottom-32 right-4 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg ring-2 ring-accent transition-transform hover:scale-105 md:bottom-24 md:right-20 md:h-14 md:w-14"
         >
           <MessageCircle className="h-6 w-6" />
           <span className="absolute -right-1 -top-1 rounded-full bg-accent px-1.5 py-0.5 text-[10px] font-bold text-primary-foreground">

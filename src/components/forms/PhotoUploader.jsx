@@ -76,7 +76,7 @@ export default function PhotoUploader({ value = [], onChange, error }) {
                 type="button"
                 onClick={() => remove(i)}
                 aria-label="Fotoğrafı kaldır"
-                className="absolute right-1 top-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100"
+                className="absolute right-1 top-1 inline-flex h-7 w-7 items-center justify-center rounded-full bg-foreground/70 text-white opacity-0 transition-opacity group-hover:opacity-100"
               >
                 <X className="h-4 w-4" />
               </button>

@@ -53,18 +53,18 @@ export default function ServiceCategory({ slug }) {
         </div>
       </div>
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <Reveal className="max-w-2xl">
             <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-accent/15 text-accent">
               <Icon className="h-5 w-5" />
             </span>
             <h1 className="heading-display mt-4 text-3xl sm:text-4xl">{cat.title}</h1>
-            <p className="mt-4 text-white/70">{cat.description}</p>
-            <p className="mt-2 flex items-center gap-1.5 text-sm text-white/60"><MapPin className="h-4 w-4" /> Bornova ve İzmir geneline hizmet</p>
+            <p className="mt-4 text-muted-foreground">{cat.description}</p>
+            <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground"><MapPin className="h-4 w-4" /> Bornova ve İzmir geneline hizmet</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" data-cta="cat-hero-whatsapp" onClick={() => trackCta("cat-hero-whatsapp", { category: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Teklif Al</a>
-              <a href={getPhoneLink()} data-cta="cat-hero-call" onClick={() => trackCta("cat-hero-call", { category: slug })} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
+              <a href={getPhoneLink()} data-cta="cat-hero-call" onClick={() => trackCta("cat-hero-call", { category: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
             </div>
           </Reveal>
         </div>
@@ -107,14 +107,14 @@ export default function ServiceCategory({ slug }) {
         )}
       </div>
 
-      <section className="bg-primary text-white">
+      <section className="bg-secondary text-foreground">
         <div className="container-grid flex flex-col items-center gap-6 py-16 text-center">
           <h2 className="heading-display max-w-2xl text-3xl sm:text-4xl">{cat.title} için Teklif Alın</h2>
-          <p className="max-w-xl text-white/70">Yapılacak alanın fotoğraflarını WhatsApp üzerinden gönderin veya Özal Usta ile doğrudan iletişime geçin.</p>
+          <p className="max-w-xl text-muted-foreground">Yapılacak alanın fotoğraflarını WhatsApp üzerinden gönderin veya Özal Usta ile doğrudan iletişime geçin.</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" data-cta="cat-final-whatsapp" onClick={() => trackCta("cat-final-whatsapp", { category: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Fotoğraf Gönder</a>
-            <a href={getPhoneLink()} data-cta="cat-final-call" onClick={() => trackCta("cat-final-call", { category: slug })} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
-            <Link to="/#teklif-al" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Ücretsiz Keşif Talep Et</Link>
+            <a href={getPhoneLink()} data-cta="cat-final-call" onClick={() => trackCta("cat-final-call", { category: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
+            <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
           </div>
         </div>
       </section>

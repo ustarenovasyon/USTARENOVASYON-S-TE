@@ -111,20 +111,20 @@ export default function About() {
       </div>
 
       {/* Hero */}
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid grid items-center gap-10 py-12 lg:grid-cols-2 lg:py-16">
           <Reveal>
             <h1 className="heading-display text-3xl sm:text-4xl">{data.heroTitle}</h1>
-            <p className="mt-4 text-white/70">{data.heroSubtitle}</p>
-            <p className="mt-3 text-sm text-white/60">{data.heroSubtitle2}</p>
-            <p className="mt-3 flex items-center gap-1.5 text-sm text-white/60"><MapPin className="h-4 w-4" /> Bornova / İzmir merkezli olarak İzmir geneline hizmet</p>
+            <p className="mt-4 text-muted-foreground">{data.heroSubtitle}</p>
+            <p className="mt-3 text-sm text-muted-foreground">{data.heroSubtitle2}</p>
+            <p className="mt-3 flex items-center gap-1.5 text-sm text-muted-foreground"><MapPin className="h-4 w-4" /> Bornova / İzmir merkezli olarak İzmir geneline hizmet</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getWhatsAppLink(data.whatsappMsg)} target="_blank" rel="noopener noreferrer" data-cta="about-hero-whatsapp" onClick={() => trackCta("about-hero-whatsapp")} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Bilgi Al</a>
-              <a href={getPhoneLink()} data-cta="about-hero-call" onClick={() => trackCta("about-hero-call")} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
-              <Link to="/hizmetler" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Hizmetleri İncele</Link>
+              <a href={getPhoneLink()} data-cta="about-hero-call" onClick={() => trackCta("about-hero-call")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
+              <Link to="/hizmetler" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Hizmetleri İncele</Link>
             </div>
           </Reveal>
-          <Reveal delay={120} className="overflow-hidden rounded-2xl border border-white/10 shadow-xl">
+          <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-xl">
             <Image src={data.heroImage} alt="Usta Renovasyon iç mekan tadilat ve boya çalışması" className="aspect-[4/3] w-full" fittingType="fill" />
           </Reveal>
         </div>
@@ -299,15 +299,15 @@ export default function About() {
       </div>
 
       {/* Son CTA */}
-      <section className="bg-primary text-white">
+      <section className="bg-secondary text-foreground">
         <div className="container-grid flex flex-col items-center gap-6 py-16 text-center">
           <h2 className="heading-display max-w-2xl text-3xl sm:text-4xl">Yapılacak İş Hakkında Özal Usta ile Görüşün</h2>
-          <p className="max-w-xl text-white/70">Boya, alçı, sıva, izolasyon veya tadilat ihtiyacınızı telefonla anlatabilir ya da alanın fotoğraflarını WhatsApp üzerinden gönderebilirsiniz.</p>
+          <p className="max-w-xl text-muted-foreground">Boya, alçı, sıva, izolasyon veya tadilat ihtiyacınızı telefonla anlatabilir ya da alanın fotoğraflarını WhatsApp üzerinden gönderebilirsiniz.</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={getWhatsAppLink(data.photoMsg)} target="_blank" rel="noopener noreferrer" data-cta="about-final-whatsapp" onClick={() => trackCta("about-final-whatsapp")} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Fotoğraf Gönder</a>
-            <a href={getPhoneLink()} data-cta="about-final-call" onClick={() => trackCta("about-final-call")} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
-            <Link to="/hizmetler" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Hizmetleri İncele</Link>
-            <Link to="/#teklif-al" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Ücretsiz Keşif Talep Et</Link>
+            <a href={getPhoneLink()} data-cta="about-final-call" onClick={() => trackCta("about-final-call")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
+            <Link to="/hizmetler" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Hizmetleri İncele</Link>
+            <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
           </div>
         </div>
       </section>

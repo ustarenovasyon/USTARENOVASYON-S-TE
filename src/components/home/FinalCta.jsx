@@ -7,13 +7,13 @@ import Reveal from "@/components/common/Reveal";
 // Footer öncesi son iletişim çağrısı.
 export default function FinalCta() {
   return (
-    <section className="bg-accent text-primary">
+    <section className="bg-secondary text-foreground">
       <div className="container-grid flex flex-col items-center gap-6 py-16 text-center lg:py-20">
         <Reveal>
           <h2 className="heading-display max-w-2xl text-3xl sm:text-4xl">
             Tadilat, Boya veya İzolasyon İhtiyacınız mı Var?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-primary/80">
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Yapılacak iş hakkında bilgi almak için Özal Usta ile doğrudan iletişime geçin.
           </p>
         </Reveal>

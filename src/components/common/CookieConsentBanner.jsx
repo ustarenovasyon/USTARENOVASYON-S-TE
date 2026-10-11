@@ -46,11 +46,11 @@ export default function CookieConsentBanner() {
           <div>
             <div className="mb-3 flex items-center justify-between">
               <h2 className="font-heading text-sm font-bold text-foreground">Çerez Tercihleri</h2>
-              <button onClick={close} className="rounded-lg p-1.5 hover:bg-slate-100"><X className="h-4 w-4 text-muted-foreground" /></button>
+              <button onClick={close} className="rounded-lg p-1.5 hover:bg-muted"><X className="h-4 w-4 text-muted-foreground" /></button>
             </div>
             <div className="space-y-2">
               {COOKIE_CATEGORIES.map((c) => (
-                <label key={c.id} className={`flex items-start gap-3 rounded-lg border border-border p-3 ${c.required ? "bg-slate-50" : ""}`}>
+                <label key={c.id} className={`flex items-start gap-3 rounded-lg border border-border p-3 ${c.required ? "bg-muted" : ""}`}>
                   <input
                     type="checkbox"
                     checked={choices[c.id]}

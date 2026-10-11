@@ -39,12 +39,12 @@ export default function SiteFooter() {
   const addressLine = getAddressLine(uiSettings.addressVisibility);
 
   return (
-    <footer id="iletisim" className="bg-primary text-white">
+    <footer id="iletisim" className="bg-secondary text-foreground">
       <div className="container-grid grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         {/* Firma */}
         <div className="lg:col-span-1">
           <Logo variant="light" />
-          <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
             Usta Renovasyon, {siteConfig.principal} yönetiminde başta Bornova olmak üzere İzmir genelinde boya, alçı, sıva, dış cephe, izolasyon, mantolama, alçıpan ve tadilat hizmetleri sunmaktadır.
           </p>
         </div>
@@ -52,9 +52,9 @@ export default function SiteFooter() {
         {/* Hızlı Bağlantılar */}
         <div>
           <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-accent">Hızlı Bağlantılar</h4>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+          <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
             {quickLinks.map((l) => (
-              <li key={l.to}><Link to={l.to} className="transition-colors hover:text-white">{l.label}</Link></li>
+              <li key={l.to}><Link to={l.to} className="transition-colors hover:text-accent">{l.label}</Link></li>
             ))}
           </ul>
         </div>
@@ -62,37 +62,37 @@ export default function SiteFooter() {
         {/* Hizmetler (dinamik) */}
         <div>
           <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-accent">Öne Çıkan Hizmetler</h4>
-          <ul className="mt-4 space-y-2.5 text-sm text-white/70">
+          <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
             {services.length > 0 ? services.map((s) => (
-              <li key={s.id}><Link to={`/hizmetler/${s.slug}`} className="transition-colors hover:text-white">{s.name}</Link></li>
+              <li key={s.id}><Link to={`/hizmetler/${s.slug}`} className="transition-colors hover:text-accent">{s.name}</Link></li>
             )) : (
               <>
-                <li><Link to="/hizmetler" className="transition-colors hover:text-white">İç Cephe Boya</Link></li>
-                <li><Link to="/hizmetler" className="transition-colors hover:text-white">Alçı ve Sıva</Link></li>
-                <li><Link to="/hizmetler" className="transition-colors hover:text-white">Çatı İzolasyonu</Link></li>
-                <li><Link to="/hizmetler" className="transition-colors hover:text-white">Mantolama</Link></li>
+                <li><Link to="/hizmetler" className="transition-colors hover:text-accent">İç Cephe Boya</Link></li>
+                <li><Link to="/hizmetler" className="transition-colors hover:text-accent">Alçı ve Sıva</Link></li>
+                <li><Link to="/hizmetler" className="transition-colors hover:text-accent">Çatı İzolasyonu</Link></li>
+                <li><Link to="/hizmetler" className="transition-colors hover:text-accent">Mantolama</Link></li>
               </>
             )}
-            <li><Link to="/hizmetler" className="text-accent transition-colors hover:text-white">Tüm Hizmetler</Link></li>
+            <li><Link to="/hizmetler" className="text-accent transition-colors hover:text-accent">Tüm Hizmetler</Link></li>
           </ul>
         </div>
 
         {/* İletişim */}
         <div>
           <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-accent">İletişim</h4>
-          <ul className="mt-4 space-y-3 text-sm text-white/70">
+          <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
             <li className="flex items-start gap-2.5">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <a href={getPhoneLink()} className="hover:text-white">{siteConfig.phone.display}</a>
+              <a href={getPhoneLink()} className="hover:text-accent">{siteConfig.phone.display}</a>
             </li>
             <li className="flex items-start gap-2.5">
               <MessageCircle className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <a href={getWhatsAppLink("Merhaba Özal Usta. WhatsApp üzerinden teklif almak istiyorum.")} target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp'tan Teklif Al</a>
+              <a href={getWhatsAppLink("Merhaba Özal Usta. WhatsApp üzerinden teklif almak istiyorum.")} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp'tan Teklif Al</a>
             </li>
             {hasEmail() && (
               <li className="flex items-start gap-2.5">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <a href={emailLink} className="break-all hover:text-white">{siteConfig.email}</a>
+                <a href={emailLink} className="break-all hover:text-accent">{siteConfig.email}</a>
               </li>
             )}
             <li className="flex items-start gap-2.5">
@@ -104,8 +104,8 @@ export default function SiteFooter() {
               <span>{siteConfig.workingHours}</span>
             </li>
             <li className="flex flex-wrap gap-2 pt-1">
-              <Link to="/teklif-al" className="rounded-lg border border-white/20 px-3 py-1.5 text-xs transition-colors hover:bg-white/10">Teklif Al</Link>
-              <Link to="/ucretsiz-kesif" className="rounded-lg border border-white/20 px-3 py-1.5 text-xs transition-colors hover:bg-white/10">Ücretsiz Keşif</Link>
+              <Link to="/teklif-al" className="rounded-lg border border-border px-3 py-1.5 text-xs transition-colors hover:bg-accent/10">Teklif Al</Link>
+              <Link to="/ucretsiz-kesif" className="rounded-lg border border-border px-3 py-1.5 text-xs transition-colors hover:bg-accent/10">Ücretsiz Keşif</Link>
             </li>
           </ul>
           {/* Bizi Takip Edin — yalnızca gerçek URL girilmiş Instagram/Facebook */}
@@ -114,15 +114,15 @@ export default function SiteFooter() {
       </div>
 
       {/* Yasal + telif */}
-      <div className="border-t border-white/10">
-        <div className="container-grid flex flex-col items-center justify-between gap-3 py-5 text-xs text-white/50 sm:flex-row md:pb-20">
+      <div className="border-t border-border">
+        <div className="container-grid flex flex-col items-center justify-between gap-3 py-5 text-xs text-muted-foreground sm:flex-row md:pb-20">
           <p>© {new Date().getFullYear()} {siteConfig.brandName}. Tüm hakları saklıdır.</p>
           <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
             {legalLinks.map((l) => (
-              <li key={l.to}><Link to={l.to} className="transition-colors hover:text-white">{l.label}</Link></li>
+              <li key={l.to}><Link to={l.to} className="transition-colors hover:text-accent">{l.label}</Link></li>
             ))}
-            <li><button onClick={openCookiePrefs} className="transition-colors hover:text-white">Çerez Tercihleri</button></li>
-            <li><Link to="/iletisim" className="transition-colors hover:text-white">İletişim</Link></li>
+            <li><button onClick={openCookiePrefs} className="transition-colors hover:text-accent">Çerez Tercihleri</button></li>
+            <li><Link to="/iletisim" className="transition-colors hover:text-accent">İletişim</Link></li>
           </ul>
           <p>Bornova / İzmir · {siteConfig.principal}</p>
         </div>

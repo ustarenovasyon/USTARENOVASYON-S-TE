@@ -41,13 +41,13 @@ export default function TeklifAl() {
 
   return (
     <section className="bg-background">
-      <div className="border-b border-border bg-primary text-white">
+      <div className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <div className="max-w-2xl">
             <span className="section-eyebrow text-accent">Teklif Al</span>
             <h1 className="heading-display mt-3 text-3xl sm:text-4xl">Tadilat ve Renovasyon İçin Fiyat Teklifi Alın</h1>
-            <p className="mt-4 text-white/70">Yapılacak hizmeti, konumu ve alanın mevcut durumunu bize iletin. Fotoğraf ekleyerek daha açıklayıcı bir ön değerlendirme talebi oluşturabilirsiniz.</p>
-            <p className="mt-2 flex items-center gap-1.5 text-sm text-white/60"><MapPin className="h-4 w-4" /> Bornova ve İzmir geneline hizmet</p>
+            <p className="mt-4 text-muted-foreground">Yapılacak hizmeti, konumu ve alanın mevcut durumunu bize iletin. Fotoğraf ekleyerek daha açıklayıcı bir ön değerlendirme talebi oluşturabilirsiniz.</p>
+            <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground"><MapPin className="h-4 w-4" /> Bornova ve İzmir geneline hizmet</p>
           </div>
         </div>
       </div>

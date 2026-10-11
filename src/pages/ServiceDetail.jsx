@@ -124,16 +124,16 @@ export default function ServiceDetail({ slug }) {
         </div>
       </div>
 
-      <header className="border-b border-border bg-primary text-white">
+      <header className="border-b border-border bg-secondary text-foreground">
         <div className="container-grid py-12 lg:py-16">
           <Reveal className="max-w-2xl">
             <h1 className="heading-display text-3xl sm:text-4xl">{service.name}</h1>
-            <p className="mt-4 text-white/70">{service.short_description || service.description}</p>
-            <p className="mt-2 flex items-center gap-1.5 text-sm text-white/60"><MapPin className="h-4 w-4" /> Bornova ve İzmir geneline hizmet</p>
+            <p className="mt-4 text-muted-foreground">{service.short_description || service.description}</p>
+            <p className="mt-2 flex items-center gap-1.5 text-sm text-muted-foreground"><MapPin className="h-4 w-4" /> Bornova ve İzmir geneline hizmet</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" data-cta="service-hero-whatsapp" onClick={() => trackCta("service-hero-whatsapp", { service: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Teklif Al</a>
-              <a href={getPhoneLink()} data-cta="service-hero-call" onClick={() => trackCta("service-hero-call", { service: slug })} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
-              <a href="#teklif" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Ücretsiz Keşif</a>
+              <a href={getPhoneLink()} data-cta="service-hero-call" onClick={() => trackCta("service-hero-call", { service: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
+              <a href="#teklif" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif</a>
             </div>
           </Reveal>
         </div>
@@ -180,7 +180,7 @@ export default function ServiceDetail({ slug }) {
             {service.process_steps && service.process_steps.length > 0 && (
               <section id="surec">
                 <h2 className="heading-display text-2xl">Uygulama Süreci</h2>
-                <ol className="mt-4 space-y-3">{service.process_steps.map((s, i) => <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-card p-3 text-sm"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">{i + 1}</span><span className="pt-1 text-muted-foreground">{s}</span></li>)}</ol>
+                <ol className="mt-4 space-y-3">{service.process_steps.map((s, i) => <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-card p-3 text-sm"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-accent-foreground">{i + 1}</span><span className="pt-1 text-muted-foreground">{s}</span></li>)}</ol>
               </section>
             )}
 
@@ -229,10 +229,10 @@ export default function ServiceDetail({ slug }) {
               <div className="rounded-xl border border-border bg-card p-5">
                 <PageToc items={toc} />
               </div>
-              <div className="rounded-xl border border-border bg-primary p-5 text-white">
+              <div className="rounded-xl border border-border bg-secondary p-5 text-foreground">
                 <p className="text-sm font-semibold">{service.name} için teklif alın.</p>
                 <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" className="btn-accent mt-3 w-full"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
-                <a href={getPhoneLink()} className="btn-outline mt-2 w-full border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Ara</a>
+                <a href={getPhoneLink()} className="btn-outline mt-2 w-full border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Ara</a>
               </div>
             </div>
           </aside>
@@ -255,14 +255,14 @@ export default function ServiceDetail({ slug }) {
         )}
       </div>
 
-      <section className="bg-primary text-white">
+      <section className="bg-secondary text-foreground">
         <div className="container-grid flex flex-col items-center gap-6 py-16 text-center">
           <h2 className="heading-display max-w-2xl text-3xl sm:text-4xl">Bu Hizmet İçin Bilgi ve Fiyat Teklifi Alın</h2>
-          <p className="max-w-xl text-white/70">Yapılacak alanın fotoğraflarını WhatsApp üzerinden gönderin veya Özal Usta ile doğrudan iletişime geçin.</p>
+          <p className="max-w-xl text-muted-foreground">Yapılacak alanın fotoğraflarını WhatsApp üzerinden gönderin veya Özal Usta ile doğrudan iletişime geçin.</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={getWhatsAppLink(photoMsg)} target="_blank" rel="noopener noreferrer" data-cta="service-final-whatsapp" onClick={() => trackCta("service-final-whatsapp", { service: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Fotoğraf Gönder</a>
-            <a href={getPhoneLink()} data-cta="service-final-call" onClick={() => trackCta("service-final-call", { service: slug })} className="btn-outline border-white/20 text-white hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
-            <a href="#teklif" className="btn-secondary border-white/30 text-white hover:bg-white hover:text-primary">Ücretsiz Keşif Talep Et</a>
+            <a href={getPhoneLink()} data-cta="service-final-call" onClick={() => trackCta("service-final-call", { service: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
+            <a href="#teklif" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</a>
           </div>
         </div>
       </section>

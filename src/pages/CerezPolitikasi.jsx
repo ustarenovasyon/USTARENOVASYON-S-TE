@@ -50,7 +50,7 @@ function CookieCat({ name, provider, duration, canDisable, children }) {
     <div className="rounded-lg border border-border bg-card p-4">
       <div className="flex items-center justify-between">
         <h3 className="font-heading text-sm font-bold text-foreground">{name}</h3>
-        <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${canDisable ? "bg-amber-100 text-amber-800" : "bg-slate-100 text-slate-700"}`}>
+        <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${canDisable ? "bg-accent/10 text-accent" : "bg-muted text-muted-foreground"}`}>
           {canDisable ? "Kapatılabilir" : "Her zaman aktif"}
         </span>
       </div>

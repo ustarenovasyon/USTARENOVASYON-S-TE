@@ -195,20 +195,20 @@ export default function AssistantChat({ sessionId, pageKey, messages, setMessage
 
   return (
     <>
-      <div className="fixed inset-0 z-50 flex items-end justify-end bg-black/20 sm:items-end sm:p-4 md:inset-auto md:right-4 md:top-20 md:bottom-auto md:h-[600px] md:w-[400px]">
+      <div className="fixed inset-0 z-50 flex items-end justify-end bg-foreground/20 sm:items-end sm:p-4 md:inset-auto md:right-4 md:top-20 md:bottom-auto md:h-[600px] md:w-[400px]">
         <div className="flex h-full w-full flex-col rounded-t-2xl bg-card shadow-2xl ring-1 ring-border md:rounded-2xl">
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-border bg-primary px-4 py-3 text-white">
+          <div className="flex items-center justify-between border-b border-border bg-secondary px-4 py-3 text-foreground">
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/20">
                 <Sparkles className="h-5 w-5 text-accent" />
               </div>
               <div>
                 <p className="text-sm font-semibold">Usta Renovasyon Asistanı</p>
-                <p className="text-[11px] text-white/70">Site içeriğiyle çalışan dijital yardımcı</p>
+                <p className="text-[11px] text-muted-foreground">Site içeriğiyle çalışan dijital yardımcı</p>
               </div>
             </div>
-            <button onClick={onClose} aria-label="Sohbeti kapat" className="rounded-lg p-1.5 hover:bg-white/10">
+            <button onClick={onClose} aria-label="Sohbeti kapat" className="rounded-lg p-1.5 hover:bg-accent/10">
               <X className="h-5 w-5" />
             </button>
           </div>
