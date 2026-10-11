@@ -22,7 +22,7 @@ export default function FeaturedPost({ post }) {
         )}
         <div className={`flex flex-col justify-center p-6 lg:p-8 ${post.cover_image ? "" : "w-full"}`}>
           <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1 rounded-md bg-accent px-2.5 py-0.5 text-xs font-bold text-primary-foreground"><Star className="h-3 w-3" /> Öne Çıkan</span>
+            <span className="inline-flex items-center gap-1 rounded-md bg-primary px-2.5 py-0.5 text-xs font-bold text-primary-foreground"><Star className="h-3 w-3" /> Öne Çıkan</span>
             {post.category_name && <span className="rounded-md bg-primary/10 px-2 py-0.5 text-xs font-semibold text-primary">{post.category_name}</span>}
           </div>
           <h2 className="mt-4 font-heading text-2xl font-bold leading-tight sm:text-3xl">

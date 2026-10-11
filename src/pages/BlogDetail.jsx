@@ -190,7 +190,7 @@ export default function BlogDetail() {
             {/* Yazar kutusu */}
             <section className="mt-12 rounded-2xl border border-border bg-card p-6">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground"><User className="h-5 w-5" /></div>
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-accent-foreground"><User className="h-5 w-5" /></div>
                 <div>
                   <p className="font-heading font-bold">{post.author || "Özal Usta"}</p>
                   <p className="mt-1 text-sm text-muted-foreground">Usta Renovasyon — Bornova / İzmir. Boya, alçı, sıva, izolasyon ve tadilat hizmetleri. İletişim: {siteConfig.phone.display}.</p>

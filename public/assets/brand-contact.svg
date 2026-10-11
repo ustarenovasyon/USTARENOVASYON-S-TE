@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
   <title id="t">Özal Usta iletişim görseli</title>
-  <desc id="d">Usta Renovasyon iletişim bilgileri için turkuaz, koyu füme ve kırık beyaz kurumsal kart</desc>
-  <rect width="1200" height="800" fill="#f8fafc"/>
-  <path d="M0 0h510L650 400 510 800H0Z" fill="#E8F5F4"/><path d="M455 0h68L665 400 523 800h-68L597 400Z" fill="#00777E"/>
-  <path d="M120 270 275 135l155 135" fill="none" stroke="#00777E" stroke-width="28" stroke-linecap="round"/><path d="M165 270h220v180H165z" fill="#17343A"/><rect x="245" y="340" width="65" height="110" fill="#00777E"/>
-  <text x="275" y="545" text-anchor="middle" fill="#17343A" font-family="Arial,Helvetica,sans-serif" font-size="54" font-weight="900">USTA</text><text x="275" y="600" text-anchor="middle" fill="#00777E" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="800">RENOVASYON</text>
-  <text x="705" y="190" fill="#17343A" font-family="Arial,Helvetica,sans-serif" font-size="72" font-weight="900">Özal Usta</text>
-  <line x1="705" y1="225" x2="1080" y2="225" stroke="#00777E" stroke-width="7"/>
-  <text x="705" y="330" fill="#17343A" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700">Telefon: 0536 035 88 98</text>
-  <text x="705" y="405" fill="#17343A" font-family="Arial,Helvetica,sans-serif" font-size="30">Web: www.ustarenovasyon.com</text>
-  <text x="705" y="480" fill="#17343A" font-family="Arial,Helvetica,sans-serif" font-size="30">E-posta: ustarenovasyon@gmail.com</text>
-  <text x="705" y="555" fill="#17343A" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800">İzmir Geneli Hizmet</text>
-  <rect x="705" y="620" width="370" height="72" rx="18" fill="#17343A"/><text x="890" y="666" text-anchor="middle" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700">Ustalık • Güven • Temiz İşçilik</text>
+  <desc id="d">Usta Renovasyon iletişim bilgileri için mavi, koyu gri ve beyaz kurumsal kart</desc>
+  <rect width="1200" height="800" fill="#FFFFFF"/>
+  <path d="M0 0h510L650 400 510 800H0Z" fill="#FFFFFF"/><path d="M455 0h68L665 400 523 800h-68L597 400Z" fill="#2F6FC2"/>
+  <path d="M120 270 275 135l155 135" fill="none" stroke="#2F6FC2" stroke-width="28" stroke-linecap="round"/><path d="M165 270h220v180H165z" fill="#20282E"/><rect x="245" y="340" width="65" height="110" fill="#2F6FC2"/>
+  <text x="275" y="545" text-anchor="middle" fill="#20282E" font-family="Arial,Helvetica,sans-serif" font-size="54" font-weight="900">USTA</text><text x="275" y="600" text-anchor="middle" fill="#2F6FC2" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="800">RENOVASYON</text>
+  <text x="705" y="190" fill="#20282E" font-family="Arial,Helvetica,sans-serif" font-size="72" font-weight="900">Özal Usta</text>
+  <line x1="705" y1="225" x2="1080" y2="225" stroke="#2F6FC2" stroke-width="7"/>
+  <text x="705" y="330" fill="#20282E" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700">Telefon: 0536 035 88 98</text>
+  <text x="705" y="405" fill="#20282E" font-family="Arial,Helvetica,sans-serif" font-size="30">Web: www.ustarenovasyon.com</text>
+  <text x="705" y="480" fill="#20282E" font-family="Arial,Helvetica,sans-serif" font-size="30">E-posta: ustarenovasyon@gmail.com</text>
+  <text x="705" y="555" fill="#20282E" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="800">İzmir Geneli Hizmet</text>
+  <rect x="705" y="620" width="370" height="72" rx="18" fill="#20282E"/><text x="890" y="666" text-anchor="middle" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="700">Ustalık • Güven • Temiz İşçilik</text>
 </svg>

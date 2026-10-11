@@ -43,7 +43,7 @@ export default function PageToc({ items }) {
               href={`#${t.id}`}
               className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-xs transition-colors ${
                 activeId === t.id
-                  ? "border-accent bg-accent font-semibold text-accent-foreground"
+                  ? "border-accent bg-primary font-semibold text-accent-foreground"
                   : "border-border bg-card text-muted-foreground hover:border-accent hover:text-accent"
               }`}
               aria-current={activeId === t.id ? "location" : undefined}

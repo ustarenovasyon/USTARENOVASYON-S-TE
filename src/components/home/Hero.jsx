@@ -48,7 +48,7 @@ export default function Hero() {
               href="#teklif-al"
               data-cta="hero-quote"
               onClick={() => trackCta("hero-quote")}
-              className="btn-secondary w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground sm:w-auto"
+              className="btn-secondary w-full border-accent text-accent hover:bg-primary hover:text-accent-foreground sm:w-auto"
             >
               <ClipboardCheck className="h-4 w-4" /> Ücretsiz Keşif
             </a>
@@ -57,7 +57,7 @@ export default function Hero() {
           <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-xs text-muted-foreground">
             {heroContent.trustTags.map((t) => (
               <li key={t} className="flex items-center gap-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-accent" /> {t}
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" /> {t}
               </li>
             ))}
           </ul>

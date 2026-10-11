@@ -114,7 +114,7 @@ export default function ServiceCategory({ slug }) {
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" data-cta="cat-final-whatsapp" onClick={() => trackCta("cat-final-whatsapp", { category: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Fotoğraf Gönder</a>
             <a href={getPhoneLink()} data-cta="cat-final-call" onClick={() => trackCta("cat-final-call", { category: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
-            <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
+            <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
           </div>
         </div>
       </section>

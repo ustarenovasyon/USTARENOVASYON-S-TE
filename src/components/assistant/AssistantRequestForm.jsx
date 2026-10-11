@@ -57,7 +57,7 @@ export default function AssistantRequestForm({ sessionId, pageKey, collected, ph
           <p className="mt-1 text-sm text-muted-foreground">
             Talebinizin bize ulaşması için açılan WhatsApp ekranındaki mesajı gönderin. Fotoğraf seçtiyseniz fotoğrafları WhatsApp içinde ayrıca ekleyebilirsiniz.
           </p>
-          <button onClick={onClose} className="mt-4 rounded-lg bg-accent px-5 py-2 text-sm font-semibold text-primary-foreground">
+          <button onClick={onClose} className="mt-4 rounded-lg bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground">
             Kapat
           </button>
         </div>
@@ -125,7 +125,7 @@ export default function AssistantRequestForm({ sessionId, pageKey, collected, ph
         <button
           onClick={submit}
           disabled={submitting || !form.name.trim() || !form.phone.trim() || !form.kvkk}
-          className="mt-4 w-full rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50"
+          className="mt-4 w-full rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50"
         >
           {submitting ? "Gönderiliyor..." : "Talebi Gönder"}
         </button>

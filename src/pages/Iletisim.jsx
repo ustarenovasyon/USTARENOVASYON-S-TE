@@ -112,8 +112,8 @@ export default function Iletisim() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getPhoneLink()} data-cta="iletisim-hero-call" onClick={() => trackCta("iletisim-hero-call")} className="btn-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
               <a href={getWhatsAppLink(PHOTOS_MSG)} target="_blank" rel="noopener noreferrer" data-cta="iletisim-hero-whatsapp" onClick={() => trackCta("iletisim-hero-whatsapp")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Yaz</a>
-              <Link to="/teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Teklif Al</Link>
-              <Link to="/ucretsiz-kesif" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
+              <Link to="/teklif-al" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Teklif Al</Link>
+              <Link to="/ucretsiz-kesif" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function Iletisim() {
               <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-accent">Özal Usta'ya Doğrudan Ulaşın</h3>
               <a href={getPhoneLink()} data-cta="iletisim-side-call" onClick={() => trackCta("iletisim-side-call")} className="btn-accent mt-3 w-full"><Phone className="h-4 w-4" /> Hemen Ara</a>
               <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" data-cta="iletisim-side-whatsapp" onClick={() => trackCta("iletisim-side-whatsapp")} className="btn-outline mt-2 w-full border-border text-foreground hover:border-accent hover:text-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Yaz</a>
-              <Link to="/ucretsiz-kesif" className="btn-secondary mt-2 w-full border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif</Link>
+              <Link to="/ucretsiz-kesif" className="btn-secondary mt-2 w-full border-accent text-accent hover:bg-primary hover:text-accent-foreground">Ücretsiz Keşif</Link>
             </div>
           </aside>
         </section>

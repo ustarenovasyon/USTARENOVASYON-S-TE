@@ -87,7 +87,7 @@ export default function AssistantWidget() {
           </p>
           <button
             onClick={handleOpen}
-            className="mt-2 rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-primary-foreground"
+            className="mt-2 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground"
           >
             Evet, yardımcı ol
           </button>
@@ -99,10 +99,10 @@ export default function AssistantWidget() {
         <button
           onClick={handleOpen}
           aria-label="Usta Renovasyon Dijital Asistanını Aç"
-          className="fixed bottom-32 right-4 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-lg ring-2 ring-accent transition-transform hover:scale-105 md:bottom-24 md:right-20 md:h-14 md:w-14"
+          className="fixed bottom-32 right-4 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-accent-foreground shadow-lg ring-2 ring-accent transition-transform hover:scale-105 md:bottom-24 md:right-20 md:h-14 md:w-14"
         >
           <MessageCircle className="h-6 w-6" />
-          <span className="absolute -right-1 -top-1 rounded-full bg-accent px-1.5 py-0.5 text-[10px] font-bold text-primary-foreground">
+          <span className="absolute -right-1 -top-1 rounded-full bg-primary px-1.5 py-0.5 text-[10px] font-bold text-primary-foreground">
             Yardım
           </span>
         </button>

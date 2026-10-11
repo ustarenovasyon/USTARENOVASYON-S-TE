@@ -7,42 +7,42 @@
 
 @layer base {
   :root {
-    /* Açık tema: kırık beyaz #F8FAFC, koyu füme #17343A */
-    --background: 210.00000 40.00000% 98.03922%;
-    --foreground: 190.28571 43.20988% 15.88235%;
+    /* Beyaz tema: beyaz #FFFFFF, koyu gri #20282E */
+    --background: 0.00000 0.00000% 100.00000%;
+    --foreground: 205.71429 17.94872% 15.29412%;
 
     --card: 0.00000 0.00000% 100.00000%;
-    --card-foreground: 190.28571 43.20988% 15.88235%;
+    --card-foreground: 205.71429 17.94872% 15.29412%;
 
     --popover: 0.00000 0.00000% 100.00000%;
-    --popover-foreground: 190.28571 43.20988% 15.88235%;
+    --popover-foreground: 205.71429 17.94872% 15.29412%;
 
-    /* Koyu turkuaz #00777E — butonlar, bağlantılar ve odak */
-    --primary: 183.33333 100.00000% 24.70588%;
+    /* Lacivert #173B6B — dolu butonlar */
+    --primary: 214.28571 64.61538% 25.49020%;
     --primary-foreground: 0.00000 0.00000% 100.00000%;
 
-    --secondary: 175.38462 39.39394% 93.52941%;
-    --secondary-foreground: 190.28571 43.20988% 15.88235%;
+    --secondary: 0.00000 0.00000% 100.00000%;
+    --secondary-foreground: 205.71429 17.94872% 15.29412%;
 
-    --muted: 172.50000 33.33333% 95.29412%;
-    --muted-foreground: 188.82353 18.88889% 35.29412%;
+    --muted: 216.00000 33.33333% 97.05882%;
+    --muted-foreground: 206.66667 8.10811% 43.52941%;
 
-    /* Turkuaz vurgu; dolu butonlar üzerinde beyaz yazı */
-    --accent: 183.33333 100.00000% 24.70588%;
+    /* Mavi #2F6FC2 — logo, bağlantılar, ikonlar ve odak */
+    --accent: 213.87755 60.99585% 47.25490%;
     --accent-foreground: 0.00000 0.00000% 100.00000%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 169.09091 25.00000% 82.74510%;
-    --input: 169.09091 25.00000% 82.74510%;
-    --ring: 183.33333 100.00000% 24.70588%;
+    --border: 214.28571 26.92308% 89.80392%;
+    --input: 214.28571 26.92308% 89.80392%;
+    --ring: 213.87755 60.99585% 47.25490%;
 
-    --chart-1: 183.33333 100.00000% 24.70588%;
-    --chart-2: 190.28571 43.20988% 15.88235%;
-    --chart-3: 182.80374 51.19617% 40.98039%;
-    --chart-4: 182.19512 36.28319% 55.68627%;
-    --chart-5: 181.09091 36.91275% 70.78431%;
+    --chart-1: 214.28571 64.61538% 25.49020%;
+    --chart-2: 213.87755 60.99585% 47.25490%;
+    --chart-3: 208.52459 59.22330% 59.60784%;
+    --chart-4: 209.62025 56.02837% 72.35294%;
+    --chart-5: 209.23077 60.00000% 87.25490%;
 
     --radius: 0.5rem;
 
@@ -51,14 +51,14 @@
     --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-    --sidebar-background: 175.38462 39.39394% 93.52941%;
-    --sidebar-foreground: 190.28571 43.20988% 15.88235%;
-    --sidebar-primary: 183.33333 100.00000% 24.70588%;
+    --sidebar-background: 0.00000 0.00000% 100.00000%;
+    --sidebar-foreground: 205.71429 17.94872% 15.29412%;
+    --sidebar-primary: 214.28571 64.61538% 25.49020%;
     --sidebar-primary-foreground: 0.00000 0.00000% 100.00000%;
-    --sidebar-accent: 174.78261 37.70492% 88.03922%;
-    --sidebar-accent-foreground: 190.28571 43.20988% 15.88235%;
-    --sidebar-border: 169.09091 25.00000% 82.74510%;
-    --sidebar-ring: 183.33333 100.00000% 24.70588%;
+    --sidebar-accent: 213.33333 75.00000% 95.29412%;
+    --sidebar-accent-foreground: 205.71429 17.94872% 15.29412%;
+    --sidebar-border: 214.28571 26.92308% 89.80392%;
+    --sidebar-ring: 213.87755 60.99585% 47.25490%;
   }
 }
 
@@ -113,7 +113,7 @@
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:brightness-105 hover:shadow-lg hover:shadow-accent/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98];
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:brightness-105 hover:shadow-lg hover:shadow-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98];
   }
 
   .btn-navy {

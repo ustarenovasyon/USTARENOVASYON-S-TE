@@ -76,7 +76,7 @@ export default function MobileMenu({ open, onClose }) {
           <a
             href="#teklif-al"
             onClick={onClose}
-            className="mt-2 block rounded-lg bg-accent px-3 py-4 text-center text-base font-bold text-accent-foreground"
+            className="mt-2 block rounded-lg bg-primary px-3 py-4 text-center text-base font-bold text-accent-foreground"
           >
             {uiSettings.headerCtaLabel}
           </a>

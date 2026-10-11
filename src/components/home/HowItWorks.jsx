@@ -22,7 +22,7 @@ export default function HowItWorks() {
             return (
               <Reveal as="li" key={i} delay={i * 70}>
                 <div className="flex gap-4 lg:flex-col lg:gap-0">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground lg:mb-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-accent-foreground lg:mb-4">
                     <Icon className="h-5 w-5 text-accent" />
                   </div>
                   <div>

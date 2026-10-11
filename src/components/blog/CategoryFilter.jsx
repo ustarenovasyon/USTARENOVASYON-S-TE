@@ -27,7 +27,7 @@ export default function CategoryFilter({ categories = [], selected, onChange }) 
               onClick={() => onChange(c.slug || null)}
               className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition-all ${
                 active
-                  ? "border-accent bg-accent text-primary-foreground shadow-sm"
+                  ? "border-accent bg-primary text-primary-foreground shadow-sm"
                   : "border-border bg-card text-primary hover:border-accent hover:text-accent"
               }`}
             >

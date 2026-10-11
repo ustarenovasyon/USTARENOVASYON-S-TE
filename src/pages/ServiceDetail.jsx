@@ -133,7 +133,7 @@ export default function ServiceDetail({ slug }) {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getWhatsAppLink(msg)} target="_blank" rel="noopener noreferrer" data-cta="service-hero-whatsapp" onClick={() => trackCta("service-hero-whatsapp", { service: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Teklif Al</a>
               <a href={getPhoneLink()} data-cta="service-hero-call" onClick={() => trackCta("service-hero-call", { service: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
-              <a href="#teklif" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif</a>
+              <a href="#teklif" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Ücretsiz Keşif</a>
             </div>
           </Reveal>
         </div>
@@ -180,7 +180,7 @@ export default function ServiceDetail({ slug }) {
             {service.process_steps && service.process_steps.length > 0 && (
               <section id="surec">
                 <h2 className="heading-display text-2xl">Uygulama Süreci</h2>
-                <ol className="mt-4 space-y-3">{service.process_steps.map((s, i) => <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-card p-3 text-sm"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-xs font-bold text-accent-foreground">{i + 1}</span><span className="pt-1 text-muted-foreground">{s}</span></li>)}</ol>
+                <ol className="mt-4 space-y-3">{service.process_steps.map((s, i) => <li key={i} className="flex items-start gap-3 rounded-lg border border-border bg-card p-3 text-sm"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-accent-foreground">{i + 1}</span><span className="pt-1 text-muted-foreground">{s}</span></li>)}</ol>
               </section>
             )}
 
@@ -262,7 +262,7 @@ export default function ServiceDetail({ slug }) {
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={getWhatsAppLink(photoMsg)} target="_blank" rel="noopener noreferrer" data-cta="service-final-whatsapp" onClick={() => trackCta("service-final-whatsapp", { service: slug })} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Fotoğraf Gönder</a>
             <a href={getPhoneLink()} data-cta="service-final-call" onClick={() => trackCta("service-final-call", { service: slug })} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
-            <a href="#teklif" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</a>
+            <a href="#teklif" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Ücretsiz Keşif Talep Et</a>
           </div>
         </div>
       </section>

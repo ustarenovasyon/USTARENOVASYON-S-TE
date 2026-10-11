@@ -83,7 +83,7 @@ export default function Sss() {
           <div className="flex flex-wrap gap-2">
             {cats.map((c) => (
               <button key={c} type="button" onClick={() => setActiveCat(c)}
-                className={`rounded-lg border px-3.5 py-1.5 text-sm font-medium transition-colors ${activeCat === c ? "border-accent bg-accent text-primary-foreground" : "border-border bg-card hover:border-accent"}`}>
+                className={`rounded-lg border px-3.5 py-1.5 text-sm font-medium transition-colors ${activeCat === c ? "border-accent bg-primary text-primary-foreground" : "border-border bg-card hover:border-accent"}`}>
                 {c}
               </button>
             ))}

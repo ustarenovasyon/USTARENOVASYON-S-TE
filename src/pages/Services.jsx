@@ -67,7 +67,7 @@ export default function Services() {
               <a href={getPhoneLink()} data-cta="services-hero-call" onClick={() => trackCta("services-hero-call")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent">
                 <Phone className="h-4 w-4" /> Hemen Ara
               </a>
-              <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+              <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">
                 Ücretsiz Keşif
               </Link>
             </div>

@@ -18,7 +18,7 @@ const ICON_MAP = {
 // Props:
 //  - title: opsiyonel başlık (varsa aktif hesaplarla birlikte gösterilir)
 //  - description: opsiyonel açıklama metni
-//  - variant: "light" (açık kart, turkuaz hover) | "solid" (açık kart, belirgin ikon)
+//  - variant: "light" (açık kart, mavi hover) | "solid" (açık kart, belirgin ikon)
 //  - size: "sm" | "md" ikon boyutu
 //  - className: dış sarmalayıcı sınıf
 export default function SocialLinks({ title, description, variant = "light", className = "", size = "md" }) {

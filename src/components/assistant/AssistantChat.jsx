@@ -282,7 +282,7 @@ export default function AssistantChat({ sessionId, pageKey, messages, setMessage
                 className="flex-1 rounded-lg border border-border bg-background px-3 py-2 text-sm outline-none focus:border-accent"
                 disabled={loading}
               />
-              <button type="submit" disabled={loading || !input.trim()} className="rounded-lg bg-accent p-2.5 text-primary-foreground disabled:opacity-50">
+              <button type="submit" disabled={loading || !input.trim()} className="rounded-lg bg-primary p-2.5 text-primary-foreground disabled:opacity-50">
                 <Send className="h-4 w-4" />
               </button>
             </form>
@@ -322,7 +322,7 @@ function MessageBubble({ m }) {
       <div
         className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm ${
           isUser
-            ? "rounded-br-sm bg-accent text-primary-foreground"
+            ? "rounded-br-sm bg-primary text-primary-foreground"
             : "rounded-bl-sm bg-card text-foreground ring-1 ring-border"
         }`}
       >

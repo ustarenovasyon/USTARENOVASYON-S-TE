@@ -135,7 +135,7 @@ export default function HizmetBolgeleri() {
                   type="button"
                   onClick={() => setFilter(f.value)}
                   className={`rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors ${
-                    filter === f.value ? "border-accent bg-accent text-primary-foreground" : "border-border bg-card text-foreground hover:border-accent hover:text-accent"
+                    filter === f.value ? "border-accent bg-primary text-primary-foreground" : "border-border bg-card text-foreground hover:border-accent hover:text-accent"
                   }`}
                 >
                   {f.label}

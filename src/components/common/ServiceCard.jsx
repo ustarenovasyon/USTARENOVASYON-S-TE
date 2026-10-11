@@ -27,7 +27,7 @@ export default function ServiceCard({ categoryKey, services = [] }) {
         <ul className="mt-4 space-y-1.5 border-t border-border pt-4">
           {services.slice(0, 5).map((s) => (
             <li key={s.id || s.slug} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent" />
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-primary" />
               <span>{s.name}</span>
             </li>
           ))}
@@ -47,7 +47,7 @@ export default function ServiceCard({ categoryKey, services = [] }) {
           rel="noopener noreferrer"
           data-cta="service-card-quote"
           onClick={() => trackCta("service-card-quote", { category: categoryKey })}
-          className="inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-3 py-2 text-xs font-semibold text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-accent/10 px-3 py-2 text-xs font-semibold text-accent transition-colors hover:bg-primary hover:text-accent-foreground"
         >
           <MessageCircle className="h-4 w-4" /> Teklif Al
         </a>

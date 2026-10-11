@@ -121,7 +121,7 @@ export default function About() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href={getWhatsAppLink(data.whatsappMsg)} target="_blank" rel="noopener noreferrer" data-cta="about-hero-whatsapp" onClick={() => trackCta("about-hero-whatsapp")} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Bilgi Al</a>
               <a href={getPhoneLink()} data-cta="about-hero-call" onClick={() => trackCta("about-hero-call")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> Hemen Ara</a>
-              <Link to="/hizmetler" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Hizmetleri İncele</Link>
+              <Link to="/hizmetler" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Hizmetleri İncele</Link>
             </div>
           </Reveal>
           <Reveal delay={120} className="overflow-hidden rounded-2xl border border-border shadow-xl">
@@ -306,8 +306,8 @@ export default function About() {
           <div className="flex flex-col gap-3 sm:flex-row">
             <a href={getWhatsAppLink(data.photoMsg)} target="_blank" rel="noopener noreferrer" data-cta="about-final-whatsapp" onClick={() => trackCta("about-final-whatsapp")} className="btn-accent"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Fotoğraf Gönder</a>
             <a href={getPhoneLink()} data-cta="about-final-call" onClick={() => trackCta("about-final-call")} className="btn-outline border-border text-foreground hover:border-accent hover:text-accent"><Phone className="h-4 w-4" /> {siteConfig.phone.display}</a>
-            <Link to="/hizmetler" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Hizmetleri İncele</Link>
-            <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-accent hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
+            <Link to="/hizmetler" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Hizmetleri İncele</Link>
+            <Link to="/#teklif-al" className="btn-secondary border-accent text-accent hover:bg-primary hover:text-accent-foreground">Ücretsiz Keşif Talep Et</Link>
           </div>
         </div>
       </section>
